@@ -4,14 +4,17 @@ import {Link} from 'react-router';
 
 export default class Nav extends React.Component {
     render() {
-        var ulStyles = {
+        let ulStyles = {
             listStyle: 'none',
-            width:100
-        }
-        var liStyles = {
-            display : 'inline',
-            padding:20
-        }
+            width: 100
+        };
+
+        let liStyles = {
+            padding: 20
+        };
+        let linkStyles = {
+            'text-decoration': none
+        };
 
         return (
             <ul style={ulStyles}>
@@ -19,7 +22,7 @@ export default class Nav extends React.Component {
 
                     return (
                         <li style={liStyles} key={i}>
-                            <Link to={link} style={{textDecoration:'none'}}>{link}</Link>
+                            <Link to={link}>{link} </Link>
                         </li>
                     )
                 })
