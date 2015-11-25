@@ -5,9 +5,9 @@
   "main": "index.js",
   "config": {
     "storageDatabaseUri": "mysql://user:password@localhost:3306/dbname",
-    "appWebpackBaseUrl": "/",
+    "appWebpackBaseUrl": "http://ec2-52-34-43-40.us-west-2.compute.amazonaws.com",
     "appWebpackBuildPath": "public/assets",
-    "appServerHost": "/",
+    "appServerHost": "http://ec2-52-34-43-40.us-west-2.compute.amazonaws.com",
     "appServerPort": 80
   },
   "scripts": {
