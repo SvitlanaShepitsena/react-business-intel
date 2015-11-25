@@ -10,6 +10,6 @@ let router = express();
 router.use('/graphql', graphQL);
 router.use('/*', app);
 
-let server = router.listen(80);
+let server = router.listen(port, host);
 
 export default server;
