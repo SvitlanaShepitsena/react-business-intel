@@ -16,7 +16,7 @@ export default class Logo extends React.Component {
         return (
             <div style={logoContainer}>
                 <Link to="/" style={logoContainer}>
-                    <img style={logoStyles} src="https://s3-us-west-2.amazonaws.com/chicagoview/icons/logo-camera.png"/>
+                    <img style={logoStyles} src="https://s3-us-west-2.amazonaws.com/chicagoview/icons/react-logo.png"/>
                 </Link>
             </div>
         )

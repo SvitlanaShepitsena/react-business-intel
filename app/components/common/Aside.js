@@ -5,7 +5,7 @@ import Nav from './Nav';
 import Logo from './Logo';
 
 
-export default class Header extends React.Component {
+export default class Aside extends React.Component {
     render() {
         let rightNav = {
             backgroundColor: 'whitesmoke',
@@ -15,11 +15,11 @@ export default class Header extends React.Component {
             minHeight: 1000
         };
 
-        var links = ['about', 'contact'];
+        var links = ['home', 'about', 'contact'];
         return (
             <div style={rightNav}>
                 <Logo/>
-                <Nav links={links} style={{float:'right'}}/>
+                <Nav links={links}/>
             </div>
         )
     }

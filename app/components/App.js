@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router';
 import Helmet from "react-helmet";
-import Header from "./common/Header";
+import Aside from "./common/Aside";
 
 
 export default class App extends React.Component {
@@ -9,7 +9,7 @@ export default class App extends React.Component {
         return (
             <div>
                 <Helmet title="Welcome to Our App"/>
-                <Header/>
+                <Aside/>
                 {this.props.children}
             </div>
         )
