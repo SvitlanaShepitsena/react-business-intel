@@ -17,34 +17,35 @@ app.set('x-powered-by', false);
 app.use(express.static(publicPath));
 
 app.use((req, res, next) => {
-  let location = createLocation(req.originalUrl);
+    let location = createLocation(req.originalUrl);
 
-  match({routes, location}, (error, redirectLocation, renderProps) => {
-    if (redirectLocation) return res.redirect(redirectLocation.pathname);
-    if (error) return next(error.message);
-    if (renderProps == null) return next(error);
+    match({routes, location}, (error, redirectLocation, renderProps) => {
+        if (redirectLocation) return res.redirect(redirectLocation.pathname);
+        if (error) return next(error.message);
+        if (renderProps == null) return next(error);
 
-    let markup = renderToString(<RoutingContext {...renderProps}/>);
-    let helmet = Helmet.rewind();
-    let html = [
-      `<!DOCTYPE html>`,
-      `<html>`,
-        `<head>`,
-          `<title>${helmet.title}</title>`,
-          helmet.meta,
-          helmet.link,
-          `<meta charset="utf-8"/>`,
-          `<link rel="stylesheet" href="${assetsPath}/app.css"></link>`,
-        `</head>`,
-        `<body>`,
-          `<div id="app">${markup}</div>`,
-        `</body>`,
-        `<script type="text/javascript" src="${assetsPath}/app.js"></script>`,
-      `</html>`
-    ].join('');
-    res.setHeader('Content-Type', 'text/html');
-    res.send(html);
-  });
+        let markup = renderToString(<RoutingContext {...renderProps}/>);
+        let helmet = Helmet.rewind();
+        let html = [
+            `<!DOCTYPE html>`,
+            `<html>`,
+            `<head>`,
+            `<title>${helmet.title}</title>`,
+            helmet.meta,
+            helmet.link,
+            `<meta charset="utf-8"/>`,
+            `<meta property="fb:app_id" content="662941980514705"/>`,
+            `<link rel="stylesheet" href="${assetsPath}/app.css"></link>`,
+            `</head>`,
+            `<body>`,
+            `<div id="app">${markup}</div>`,
+            `</body>`,
+            `<script type="text/javascript" src="${assetsPath}/app.js"></script>`,
+            `</html>`
+        ].join('');
+        res.setHeader('Content-Type', 'text/html');
+        res.send(html);
+    });
 });
 
 export default app;
