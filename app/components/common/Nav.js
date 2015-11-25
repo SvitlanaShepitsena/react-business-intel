@@ -6,13 +6,15 @@ export default class Nav extends React.Component {
     render() {
         let ulStyles = {
             listStyle: 'none',
-            width: 100
+            paddingLeft: 0
         };
 
         let liStyles = {
-            padding: 20
+            padding: 15
         };
         let linkStyles = {
+            textTransform: 'uppercase',
+            fontSize: 14,
             textDecoration: 'none'
         };
 

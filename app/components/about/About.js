@@ -1,7 +1,12 @@
 import React from 'react';
+import Toolbar from '../common/Toolbar';
 
-let About = () => (
-  <div>Rendering About component</div>
-);
-
-export default About;
+export default class About extends React.Component {
+    render() {
+        return (
+            <div>
+                <Toolbar title="About Component"/>
+            </div>
+        )
+    }
+};
