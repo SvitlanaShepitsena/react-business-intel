@@ -13,7 +13,7 @@ export default class Nav extends React.Component {
             padding: 20
         };
         let linkStyles = {
-            'text-decoration': none
+            textDecoration: 'none'
         };
 
         return (
@@ -22,7 +22,7 @@ export default class Nav extends React.Component {
 
                     return (
                         <li style={liStyles} key={i}>
-                            <Link to={link}>{link} </Link>
+                            <Link to={link} style={linkStyles}>{link}</Link>
                         </li>
                     )
                 })
