@@ -7,7 +7,7 @@
     "storageDatabaseUri": "mysql://user:password@localhost:3306/dbname",
     "appWebpackBaseUrl": "/",
     "appWebpackBuildPath": "public/assets",
-    "appServerHost": "/1",
+    "appServerHost": "/",
     "appServerPort": 80
   },
   "scripts": {
