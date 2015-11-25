@@ -7,10 +7,16 @@ import Logo from './Logo';
 
 export default class Header extends React.Component {
     render() {
-        var links=['about','contact'];
+        let rightNav = {
+            'background-color': 'whitesmoke',
+            float: 'left',
+            width: 200
+        };
+
+        var links = ['about', 'contact'];
         return (
-            <div>
-                <Logo style={{float:'left',width:'50px'}}  />
+            <div style={rightNav}>
+                <Logo/>
                 <Nav links={links} style={{float:'right'}}/>
             </div>
         )
