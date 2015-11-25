@@ -8,9 +8,11 @@ import Logo from './Logo';
 export default class Header extends React.Component {
     render() {
         let rightNav = {
-            'background-color': 'whitesmoke',
+            backgroundColor: 'whitesmoke',
             float: 'left',
-            width: 200
+            boxShadow: '0 1px 2px rgba(0,0,0,.3)',
+            width: 220,
+            minHeight: 1000
         };
 
         var links = ['about', 'contact'];

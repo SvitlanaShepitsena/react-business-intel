@@ -5,6 +5,7 @@ import {Link} from 'react-router';
 export default class Logo extends React.Component {
     render() {
         let logoContainer = {
+            paddingTop: 8,
             width: 'inherit'
         };
         let logoStyles = {
