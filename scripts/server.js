@@ -12,7 +12,7 @@ router.use('/*', app);
 var user = process.env.USER;
 let server;
 
-if (!(user === 'ec2-user' || user === 'root')) {
+if ((user === 'ec2-user' || user === 'root')) {
     server = router.listen(80);
 } else {
     server = router.listen(port,host);
