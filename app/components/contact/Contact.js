@@ -1,7 +1,12 @@
 import React from 'react';
+import Toolbar from '../common/Toolbar';
 
-let Contact = () => (
-  <div>Rendering Contact component2</div>
-);
-
-export default Contact;
+export default class Contact extends React.Component {
+    render() {
+        return (
+            <div>
+                <Toolbar title="Contact Component"/>
+            </div>
+        )
+    }
+};
