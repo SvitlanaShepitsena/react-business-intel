@@ -8,7 +8,7 @@ import Contact from './components/contact/Contact';
 
 export default (
     <Route path="/" component={App}>
-        <Route path="/home" component={Main}/>
+        <Route path="/home" component={Main} />
         <Route path="/about" component={About}/>
         <Route path="/contact" component={Contact}/>
     </Route>
