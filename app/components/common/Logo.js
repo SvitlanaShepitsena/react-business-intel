@@ -4,23 +4,26 @@ import {Link} from 'react-router';
 
 export default class Logo extends React.Component {
     render() {
-        let logoContainer = {
-            paddingTop: 8,
-            width: 'inherit'
-        };
-        let logoStyles = {
-            display: 'block',
-            width: 100,
-            margin: '0px auto'
-        };
         return (
-            <div style={logoContainer}>
-                <Link to="/" style={logoContainer}>
-                    <img style={logoStyles} src="https://s3-us-west-2.amazonaws.com/chicagoview/icons/react-logo.png"/>
+            <div style={styles.logoWrapper}>
+                <Link to="/">
+                    <img style={styles.base} src="https://s3-us-west-2.amazonaws.com/chicagoview/icons/react-logo.png"/>
                 </Link>
             </div>
         )
     }
 };
 
+
+var styles = {
+    base: {
+        display: 'block',
+        width: 100,
+        margin: '0px auto'
+    },
+    logoWrapper: {
+        paddingTop: 8,
+        width: 'inherit'
+    },
+};
 

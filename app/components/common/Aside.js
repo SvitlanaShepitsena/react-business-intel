@@ -12,7 +12,7 @@ export default class Aside extends React.Component {
 
         var links = ['home', 'about', 'contact'];
         return (
-            <div style={[rightNav.base]}>
+            <div style={[styles.base]}>
                 <Logo/>
                 <Nav links={links}/>
             </div>
@@ -21,18 +21,15 @@ export default class Aside extends React.Component {
 };
 
 
-var rightNav = {
+var styles = {
     base: {
-        backgroundColor: color('red').lighten(15),
+        backgroundColor: color('whitesmoke'),
         float: 'left',
         boxShadow: '0 1px 2px rgba(0,0,0,.3)',
         width: 220,
         height: 'auto',
         minHeight: 1100
     },
-    ':hover': {
-        backgroundColor: color('red').darken(15).setAlpha(.3),
 
-    }
 };
 

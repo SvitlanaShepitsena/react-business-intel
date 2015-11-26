@@ -3,24 +3,11 @@ import Toolbar from '../common/Toolbar';
 
 export default class Main extends React.Component {
     render() {
-        let
-            containerStyles = {
-                backgroundColor: 'whitesmoke',
-                display: 'block',
-                height: 'auto'
-            };
-        let
-            pStyles = {
-                display: 'block',
-                fontSize: 14,
-                lineHeight: 2,
-                paddingLeft: 20
-            };
         return (
             <div>
                 <Toolbar title="Home component"/>
-                <div style={containerStyles}>
-                    <p style={pStyles}>
+                <div style={styles.containerStyles}>
+                    <p style={styles.pStyles}>
                         At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
                         deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
                         provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et
@@ -34,4 +21,17 @@ export default class Main extends React.Component {
             </div>
         )
     }
+};
+var styles = {
+    containerStyles: {
+        backgroundColor: 'whitesmoke',
+        display: 'block',
+        height: 'auto'
+    },
+    pStyles: {
+        display: 'block',
+        fontSize: 14,
+        lineHeight: 2,
+        paddingLeft: 20
+    },
 };
