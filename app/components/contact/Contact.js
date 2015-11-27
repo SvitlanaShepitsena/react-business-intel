@@ -8,6 +8,9 @@ export default class Contact extends React.Component {
             <div>
                 <Helmet title="Contact Us"/>
                 <Toolbar title="Contact Component"/>
+                <div>
+                    Contact us form
+                </div>
             </div>
         )
     }
