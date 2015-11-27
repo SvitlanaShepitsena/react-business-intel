@@ -5,10 +5,10 @@
   "main": "index.js",
   "config": {
     "storageDatabaseUri": "mysql://user:password@localhost:3306/dbname",
-    "appWebpackBaseUrl": "http://localhost:8080",
+    "appWebpackBaseUrl": "http://chicagowebapp.com:8080",
     "appWebpackBuildPath": "public/assets",
-    "appServerHost": "127.0.0.1",
-    "appServerPort": 4444
+    "appServerHost": "52.34.138.17",
+    "appServerPort": 80
   },
   "scripts": {
     "app:webpack:start": "webpack-dev-server --hot --inline --progress --colors",
