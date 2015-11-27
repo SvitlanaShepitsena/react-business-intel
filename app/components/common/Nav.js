@@ -29,8 +29,9 @@ var styles = {
         padding: 20
     },
     linkStyles: {
+        color: '#244762',
         textTransform: 'uppercase',
-        fontSize: 12,
+        fontSize: 14,
         textDecoration: 'none'
     },
 };

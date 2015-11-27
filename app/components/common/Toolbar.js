@@ -1,5 +1,7 @@
 import React from 'react';
+import Radium from 'radium';
 
+@Radium
 export default class Toolbar extends React.Component {
     render() {
         return (
@@ -15,6 +17,7 @@ export default class Toolbar extends React.Component {
 
 var styles = {
     appToolbar: {
+        marginBottom: 10,
         backgroundColor: 'whitesmoke',
         boxShadow: '0 1px 2px rgba(0,0,0,.3)',
         display: 'block',
@@ -22,7 +25,9 @@ var styles = {
         height: 'auto',
     },
     titleStyles: {
-        fontSize: 22,
+        fontWeight: 600,
+        color: '#244762',
+        fontSize: 24,
         lineHeight: 4,
         marginLeft: 20
     }

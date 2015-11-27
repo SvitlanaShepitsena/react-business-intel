@@ -24,13 +24,16 @@ export default class App extends React.Component {
 };
 var styles = {
     mainContainerStyles: {
+        color: '#393939',
+        fontWeight: 500,
+        fontFamily: "Segoe UI, Arial,sans-serif",
         position: 'relative',
         marginLeft: 'auto',
         marginRight: 'auto',
         marginTop: 'auto',
         marginBottom: 'auto',
         width: 1240,
-        minHeight: 1200
+        minHeight: 1220
     },
     footerStyles: {
         position: 'absolute',
