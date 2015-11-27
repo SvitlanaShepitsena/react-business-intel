@@ -1,6 +1,5 @@
 import React from 'react';
 import _ from 'lodash';
-import Helmet from "react-helmet";
 import Toolbar from '../common/Toolbar';
 import YouTube from 'react-youtube';
 
@@ -18,11 +17,6 @@ export default class Home extends React.Component {
 
         return (
             <div>
-                <Helmet title="Web Application Startup Template with ReactJs"
-                        meta={[ {"name": "og:title", "content": "Web Application Startup Template with ReactJs"},
-                         {"name": "og:description", "content": "ReactJs. Best Practices for Personal Webapps"},
-                         {"name": "og:video", "content": "https://youtu.be/xjX_-VjsUfU?list=PLPgDBCA1Cb3Ngjpo21aFkdqVT2H0fZu3W"}
-                          ]}/>
                 <Toolbar title="Web Application Startup Template with ReactJs" sv="toolbarStyles"/>
                 <div style={styles.containerStyles}>
                     <br/>

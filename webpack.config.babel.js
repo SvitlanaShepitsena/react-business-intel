@@ -3,6 +3,7 @@ import webpack from 'webpack';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 const env = process.env;
+const version = env.npm_package_version;
 const buildPath = env.npm_package_config_appWebpackBuildPath;
 const baseUrl = env.npm_package_config_appWebpackBaseUrl;
 
@@ -11,9 +12,9 @@ let config = {
     app: path.resolve('app/client.js')
   },
   output: {
-    path: path.resolve(`${buildPath}/`),
+    path: path.resolve(`${buildPath}/${version}`),
     filename: '[name].js',
-    publicPath: `${baseUrl}/`
+    publicPath: `${baseUrl}/${version}/`
   },
   module: {
     loaders: [

@@ -40,6 +40,13 @@ app.use((req, res, next) => {
             `<link rel="icon" media="all" type="image/x-icon" href="/favicon.ico"/>`,
             `</head>`,
             `<body>`,
+            `<div id="fb-root"></div>`,
+            `<script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=662941980514705";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>`,
+
             /* server side element*/
             `<div id="app">${markup}</div>`,
             `</body>`,
