@@ -7,9 +7,16 @@ import Toolbar from "./common/Toolbar";
 
 export default class App extends React.Component {
     render() {
+        let content = "ReactJs. Best Practices for Personal Webapps"
         return (
             <div style={styles.mainContainerStyles}>
-                <Helmet title="Welcome to Our App"/>
+                <Helmet
+                    title="Web Application Startup Template with ReactJs"
+                    meta={[
+                    {"name": "description", "content": "Helmet application"},
+                    {"property": "og:title", "content": content}
+                ]}
+                />
                 <div style={styles.asideStyles}>
                     <Aside/>
                 </div>
