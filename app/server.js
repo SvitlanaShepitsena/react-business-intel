@@ -44,7 +44,7 @@ app.use((req, res, next) => {
             `<div id="app">${markup}</div>`,
             `</body>`,
             /* client side element*/
-            `<script type="text/javascript" src="/assets/1.0.0/app.js"></script>`,
+            `<script type="text/javascript" src="/public/assets/1.0.0/app.js"></script>`,
             `</html>`
         ].join('\n');
         res.setHeader('Content-Type', 'text/html');
