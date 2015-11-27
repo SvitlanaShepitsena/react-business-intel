@@ -6,8 +6,8 @@
   "config": {
     "storageDatabaseUri": "mysql://user:password@localhost:3306/dbname",
     "appWebpackBaseUrl": "http://www.chicagowebapp.com",
-    "appWebpackBuildPath": "public/assets",
-    "appServerHost": "52.34.138.17",
+    "appWebpackBuildPath": "public",
+    "appServerHost": "127.0.0.1",
     "appServerPort": 80
   },
   "scripts": {

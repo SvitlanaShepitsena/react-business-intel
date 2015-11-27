@@ -14,10 +14,22 @@ let app = express();
 app.set('trust proxy', 'loopback');
 app.set('x-powered-by', false);
 app.use(express.static(publicPath));
+console.log(publicPath);
 
 global.navigator = {userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2454.85 Safari/537.36'};
+app.use((req,res,next)=>{
+    var url = req.originalUrl;
+    var lastPart = url.split('/').pop();
+    if (lastPart.indexOf('.')>-1) {
+        res.sendFile(lastPart, { root: path.join(__dirname, '../public') });
+    } else{
+        next();
+    }
+});
 
-app.use((req, res, next) => {
+app.get('/',(req, res, next) => {
+
+
     let location = createLocation(req.originalUrl);
     var assetsPath = `${req.protocol}://${req.get('host')}/${env.npm_package_version}`;
 
@@ -44,7 +56,7 @@ app.use((req, res, next) => {
             `<div id="app">${markup}</div>`,
             `</body>`,
             /* client side element*/
-            `<script type="text/javascript" src="${assetsPath}/app.js"></script>`,
+            `<script type="text/javascript" src="/app.js"></script>`,
             `</html>`
         ].join('\n');
         res.setHeader('Content-Type', 'text/html');
