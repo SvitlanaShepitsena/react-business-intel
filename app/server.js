@@ -53,7 +53,7 @@ app.use((req, res, next) => {
             /* client side element*/
             `<script type="text/javascript" src="${assetsPath}/app.js"></script>`,
             `</html>`
-        ].join('');
+        ].join('\n');
         res.setHeader('Content-Type', 'text/html');
         res.send(html);
     });

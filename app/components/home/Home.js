@@ -9,7 +9,8 @@ export default class Home extends React.Component {
         const opts = {
             height: '490',
             width: '740',
-            playerVars: { // https://developers.google.com/youtube/player_parameters
+
+            playerVars: {
                 autoplay: 0
             }
         };
@@ -23,7 +24,8 @@ export default class Home extends React.Component {
                         <h2 style={styles.pageHeaderStyles}>ReactJs. Best Practices for Personal Webapps</h2>
                         <br/>
                         <YouTube
-                            url={'https://www.youtube.com/embed/xjX_-VjsUfU?list=PLPgDBCA1Cb3Ngjpo21aFkdqVT2H0fZu3W'}
+                            id="1"
+                            url={'https://www.youtube.com/watch?v=7klNQyyLpiA'}
                             opts={opts}
                             onPlay={this._onPlay}
                         />
