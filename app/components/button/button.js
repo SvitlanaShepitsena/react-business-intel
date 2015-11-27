@@ -34,12 +34,6 @@ var styles = {
         cursor: "pointer",
         outline: "none",
 
-        '@media (minWidth: 992px)': {
-            padding: "0.6em 1.2em"
-        },
-        '@media (minWidth: 1200px)': {
-            padding: "0.8em 1.5em"
-        },
 
         ':hover': {
             backgroundColor: "#0088FF"
