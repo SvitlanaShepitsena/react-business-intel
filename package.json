@@ -37,7 +37,6 @@
     "radium": "^0.15.3",
     "react": "^0.14.3",
     "react-dom": "^0.14.0",
-    "react-grid-layout": "git+https://github.com/STRML/react-grid-layout.git#next",
     "react-helmet": "^2.1.0",
     "react-router": "^1.0.0-rc3",
     "sequelize": "^3.12.1",
