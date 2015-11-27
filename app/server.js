@@ -37,13 +37,14 @@ app.use((req, res, next) => {
             helmet.link,
             `<meta charset="utf-8"/>`,
             `<meta property="fb:app_id" content="662941980514705"/>`,
-            '<link rel="icon" media="all" type="image/x-icon" href="/favicon.ico"/>',
+            `<link rel="icon" media="all" type="image/x-icon" href="/favicon.ico"/>`,
             `</head>`,
             `<body>`,
 
             /* server side element*/
             `<div id="app">${markup}</div>`,
             `</body>`,
+            /* client side element*/
             `<script type="text/javascript" src="${assetsPath}/app.js"></script>`,
             `</html>`
         ].join('');

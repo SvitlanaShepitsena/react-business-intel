@@ -24,7 +24,6 @@ export default class Aside extends React.Component {
 var styles = {
     base: {
         backgroundColor: color('whitesmoke'),
-        float: 'left',
         boxShadow: '0 1px 2px rgba(0,0,0,.3)',
         width: 220,
         height: 'auto',

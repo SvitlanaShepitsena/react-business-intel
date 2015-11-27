@@ -7,11 +7,12 @@ import Toolbar from "./common/Toolbar";
 
 export default class App extends React.Component {
     render() {
-
         return (
             <div style={styles.mainContainerStyles}>
                 <Helmet title="Welcome to Our App"/>
-                <Aside style={styles.asideStyles}/>
+                <div style={styles.asideStyles}>
+                    <Aside/>
+                </div>
                 <div style={styles.mainContentStyles}>
                     {this.props.children}
                 </div>
@@ -42,8 +43,7 @@ var styles = {
         bottom: 0
     },
     asideStyles: {
-        float: 'left',
-        width: 250
+        float: 'left'
     },
     mainContentStyles: {
         float: 'left',

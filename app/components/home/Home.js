@@ -10,7 +10,7 @@ export default class Home extends React.Component {
             height: '490',
             width: '740',
             playerVars: { // https://developers.google.com/youtube/player_parameters
-                autoplay: 1
+                autoplay: 0
             }
         };
 
