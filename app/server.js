@@ -19,7 +19,7 @@ global.navigator = {userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/
 
 app.use((req, res, next) => {
     let location = createLocation(req.originalUrl);
-    var assetsPath = `${req.protocol}${req.get('host')}/${env.npm_package_version}`;
+    var assetsPath = `${req.protocol}://${req.get('host')}/${env.npm_package_version}`;
 
     match({routes, location}, (error, redirectLocation, renderProps) => {
         if (redirectLocation) return res.redirect(redirectLocation.pathname);
