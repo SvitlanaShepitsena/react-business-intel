@@ -5,8 +5,8 @@
   "main": "index.js",
   "config": {
     "storageDatabaseUri": "mysql://user:password@localhost:3306/dbname",
-    "appWebpackBaseUrl": "http://localhost:8080",
-    "appWebpackBuildPath": "public",
+    "appWebpackBaseUrl": "/",
+    "appWebpackBuildPath": "app",
     "appServerHost": "127.0.0.1",
     "appServerPort": 4444
   },
@@ -14,7 +14,7 @@
     "app:webpack:start": "webpack-dev-server --hot --inline --progress --colors",
     "build": "webpack -p",
     "start": "babel-node scripts/server.js",
-    "app:server:start:dev": "nodemon --exec babel-node -- scripts/server.js",
+    "dev": "nodemon --exec babel-node -- scripts/server.js",
     "storage:db:migrate": "sequelize db:migrate --url $npm_package_config_storageDatabaseUri --models-path ./storage/models --migrations-path ./storage/migrations",
     "storage:db:rollback": "sequelize db:migrate:undo --url $npm_package_config_storageDatabaseUri --models-path ./storage/models --migrations-path ./storage/migrations",
     "storage:db:seed": "babel-node ./storage/seed.js",
@@ -25,6 +25,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "app-root-path": "^1.0.0",
     "babel": "^5.8.23",
     "babel-runtime": "^5.8.25",
     "express": "^4.13.3",
