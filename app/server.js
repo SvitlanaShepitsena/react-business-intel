@@ -1,4 +1,3 @@
-var appRoot = require('app-root-path');
 import path from 'path';
 import express from 'express';
 import React from 'react';
@@ -9,14 +8,13 @@ import {RoutingContext, match} from 'react-router';
 import routes from './routes';
 
 const env = process.env;
-const assetsPath = `${env.npm_package_config_appWebpackBaseUrl}`;
-const publicPath = path.join(__dirname, '../public');
-console.log(publicPath);
+const assetsPath = `${env.npm_package_config_appWebpackBaseUrl}/${env.npm_package_version}`;
+const publicPath = path.resolve('../public');
 
 let app = express();
 app.set('trust proxy', 'loopback');
 app.set('x-powered-by', false);
-app.use('/js',express.static(path.join(__dirname, 'public/javascripts')));
+app.use(express.static(publicPath));
 
 global.navigator = {userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2454.85 Safari/537.36'};
 
@@ -53,9 +51,9 @@ app.use((req, res, next) => {
             `<div id="app">${markup}</div>`,
             `</body>`,
             /* client side element*/
-            `<script type="text/javascript" src="js/app.js"></script>`,
+            `<script type="text/javascript" src="${assetsPath}/app.js"></script>`,
             `</html>`
-        ].join('\r');
+        ].join('\n');
         res.setHeader('Content-Type', 'text/html');
         res.send(html);
     });
