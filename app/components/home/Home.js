@@ -1,13 +1,19 @@
 import React from 'react';
 import Toolbar from '../common/Toolbar';
-var ReactGridLayout = require('react-grid-layout');
+import Button from '../button/Button';
 
 export default class Home extends React.Component {
+    onClick() {
+        console.log("Clicked");
+    }
+
+
     render() {
         return (
             <div>
                 <Toolbar title="Home component"/>
                 <div style={styles.containerStyles}>
+                    <Button onClick={this.onClick}>Click</Button>
                     <p style={styles.pStyles}>
                         At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
                         deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
@@ -22,7 +28,8 @@ export default class Home extends React.Component {
             </div>
         )
     }
-};
+}
+;
 var styles = {
     containerStyles: {
         backgroundColor: 'whitesmoke',
