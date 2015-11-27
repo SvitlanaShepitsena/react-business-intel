@@ -4,22 +4,22 @@
   "description": "",
   "main": "index.js",
   "config": {
-    "storageDatabaseUri": "mysql://user:password@localhost:3306/dbname",
-    "appWebpackBaseUrl": "http://localhost:8080",
+    "appServerHost": "52.34.138.17",
+    "appServerPort": 80,
+    "appWebpackBaseUrl": "http://chicagowebapp.com:8080",
     "appWebpackBuildPath": "public/assets",
-    "appServerHost": "127.0.0.1",
-    "appServerPort": 4444
+    "storageDatabaseUri": "mysql://user:password@localhost:3306/dbname"
   },
   "scripts": {
-    "app:webpack:start": "webpack-dev-server --hot --inline --progress --colors",
-    "build": "webpack -p",
     "app:server:start": "babel-node scripts/server.js",
-    "app:server:start:dev": "nodemon --exec babel-node -- scripts/server.js",
+    "start": "nodemon --exec babel-node -- scripts/server.js",
+    "build": "webpack -p",
+    "app:webpack:start": "webpack-dev-server --hot --inline --progress --colors",
+    "lint": "jshint .",
     "storage:db:migrate": "sequelize db:migrate --url $npm_package_config_storageDatabaseUri --models-path ./storage/models --migrations-path ./storage/migrations",
     "storage:db:rollback": "sequelize db:migrate:undo --url $npm_package_config_storageDatabaseUri --models-path ./storage/models --migrations-path ./storage/migrations",
     "storage:db:seed": "babel-node ./storage/seed.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "jshint .",
     "validate": "npm ls"
   },
   "author": "",
@@ -58,7 +58,7 @@
   },
   "pre-commit": [
     "lint",
-    "validate",
-    "test"
+    "test",
+    "validate"
   ]
 }
