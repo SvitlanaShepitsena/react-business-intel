@@ -1,5 +1,6 @@
 import React from 'react';
 import Toolbar from '../common/Toolbar';
+var ReactGridLayout = require('react-grid-layout');
 
 export default class Home extends React.Component {
     render() {

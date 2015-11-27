@@ -18,7 +18,9 @@
     "storage:db:migrate": "sequelize db:migrate --url $npm_package_config_storageDatabaseUri --models-path ./storage/models --migrations-path ./storage/migrations",
     "storage:db:rollback": "sequelize db:migrate:undo --url $npm_package_config_storageDatabaseUri --models-path ./storage/models --migrations-path ./storage/migrations",
     "storage:db:seed": "babel-node ./storage/seed.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "jshint .",
+    "validate": "npm ls"
   },
   "author": "",
   "license": "ISC",
@@ -30,13 +32,17 @@
     "graphql": "^0.4.7",
     "graphql-sequelize": "^0.11.4",
     "history": "^1.12.5",
+    "lodash": "^3.10.1",
     "mysql": "^2.9.0",
-    "react": "^0.14.0",
+    "radium": "^0.15.3",
+    "react": "^0.14.3",
     "react-dom": "^0.14.0",
+    "react-grid-layout": "git+https://github.com/STRML/react-grid-layout.git#next",
     "react-helmet": "^2.1.0",
     "react-router": "^1.0.0-rc3",
     "sequelize": "^3.12.1",
-    "sequelize-cli": "git+https://github.com/xpepermint/cli.git"
+    "sequelize-cli": "git+https://github.com/xpepermint/cli.git",
+    "tinycolor2": "^1.1.2"
   },
   "devDependencies": {
     "babel-loader": "^5.3.2",
@@ -49,5 +55,10 @@
     "stylus-loader": "^1.4.0",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.0"
-  }
+  },
+  "pre-commit": [
+    "lint",
+    "validate",
+    "test"
+  ]
 }
