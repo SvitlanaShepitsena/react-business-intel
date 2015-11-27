@@ -35,7 +35,7 @@ app.use((req, res, next) => {
             helmet.link,
             `<meta charset="utf-8"/>`,
             `<meta property="fb:app_id" content="662941980514705"/>`,
-            `<link rel="stylesheet" href="${assetsPath}/app.css"></link>`,
+            '<link rel="icon" media="all" type="image/x-icon" href="/favicon.ico"/>',
             `</head>`,
             `<body>`,
             `<div id="app">${markup}</div>`,
