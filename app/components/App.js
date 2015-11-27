@@ -10,7 +10,9 @@ export default class App extends React.Component {
         return (
             <div style={styles.mainContainerStyles}>
                 <Helmet title="Web Application Startup Template with ReactJs"
-                        meta={[ {"name": "og:title", "content": "Web Application Startup Template with ReactJs"}, {"name": "og:description", "content": "ReactJs. Best Practices for Personal Webapps"} ]}/>
+                        meta={[ {"name": "og:title", "content": "Web Application Startup Template with ReactJs"},
+                         {"name": "og:description", "content": "ReactJs. Best Practices for Personal Webapps"},
+                          ]}/>
                 <div style={styles.asideStyles}>
                     <Aside/>
                 </div>
