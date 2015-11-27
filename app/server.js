@@ -8,7 +8,6 @@ import {RoutingContext, match} from 'react-router';
 import routes from './routes';
 
 const env = process.env;
-const assetsPath = `${env.npm_package_config_appWebpackBaseUrl}/${env.npm_package_version}`;
 const publicPath = path.resolve('../public');
 
 let app = express();
@@ -20,6 +19,7 @@ global.navigator = {userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/
 
 app.use((req, res, next) => {
     let location = createLocation(req.originalUrl);
+    var assetsPath = `${req.protocol}${req.get('host')}/${env.npm_package_version}`;
 
     match({routes, location}, (error, redirectLocation, renderProps) => {
         if (redirectLocation) return res.redirect(redirectLocation.pathname);
@@ -40,13 +40,6 @@ app.use((req, res, next) => {
             `<link rel="icon" media="all" type="image/x-icon" href="/favicon.ico"/>`,
             `</head>`,
             `<body>`,
-            `<div id="fb-root"></div>`,
-            `<script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=662941980514705";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));</script>`,
-
             /* server side element*/
             `<div id="app">${markup}</div>`,
             `</body>`,
