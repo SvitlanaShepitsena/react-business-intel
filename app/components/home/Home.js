@@ -22,7 +22,12 @@ export default class Home extends React.Component {
                     <div style={styles.iframeContainer}>
                         <h2 style={styles.pageHeaderStyles}>ReactJs. Best Practices for Personal Webapps</h2>
                         <div>
-                            <h3>1. Why ReactJs</h3>
+                            <ul style={styles.ul}>
+                                <li style={styles.li}>Nov 24, 2015</li>
+                                <li style={styles.li}>
+                                    <h3>1. Why ReactJs</h3>
+                                </li>
+                            </ul>
                             <YouTube
                                 id="1"
                                 url={'https://youtu.be/xjX_-VjsUfU'}
@@ -58,6 +63,12 @@ var styles = {
         color: '#393939',
         marginBottom: '10',
         fontWeight: 500
+    },
+    ul: {
+        decoration: 'none'
+    },
+    li: {
+        display: 'inline'
     },
 
     iframeContainer: {
