@@ -12,9 +12,9 @@ let config = {
     app: path.resolve('app/client.js')
   },
   output: {
-    path: path.resolve(`${buildPath}`),
+    path: path.resolve(`${buildPath}/${version}`),
     filename: '[name].js',
-    publicPath: `${baseUrl}/`
+    publicPath: `${baseUrl}/${version}/`
   },
   module: {
     loaders: [
