@@ -1,14 +1,9 @@
-# isomorphic-[react](https://facebook.github.io/react/)-[relay](https://facebook.github.io/relay/)-boilerplate
+# ReactJs. Best Practices for Personal Webapps
+Code examples for [video tutorial](https://www.youtube.com/playlist?list=PLPgDBCA1Cb3Ngjpo21aFkdqVT2H0fZu3W)
 
-**Work in progress!**
-
-This project is more like a `tutorial` on how to quickly build an isomorphic app based on [Node](https://nodejs.org/en/), Facebook's [React](https://facebook.github.io/react/), [React Router](https://github.com/rackt/react-router), [Relay](https://facebook.github.io/relay/) and [GraphQL](http://graphql.org/). In Node.js we are used to split complex all-in-one applications into several smaller ones. Thus our code is easier to read, easier to maintain and projects become long-term sustainable.
-
-Every implementation step of this boilerplate is documented under the `docs` directory so you can build everything from scratch.
-
+[This link](http://example.net/) has no title attribute.
 # Start
 
-1. Follow the [implementation steps](docs) or just clone this repository.
-2. Start application HTTP server: `npm run app:server:start:dev`.
-3. Start application Webpack server: `npm run app:webpack:start`.
-4. Navigate to `http://localhost:4444`.
+1. Start application HTTP server: `npm run app:server:start:dev`.
+2. Start application Webpack server: `npm run app:webpack:start`.
+3. Navigate to `http://localhost:4444`.
