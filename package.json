@@ -1,7 +1,11 @@
 {
-  "name": "isomorphic-react-relay-boilerplate",
+  "name": "react-best-practices",
   "version": "1.0.0",
   "description": "",
+ "repository": {
+  "type": "git",
+  "url": "git://github.com/SvitlanaShepitsena/react-business-intel.git"
+},
   "main": "index.js",
   "config": {
     "storageDatabaseUri": "mysql://user:password@localhost:3306/dbname",
