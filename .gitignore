@@ -2,5 +2,4 @@
 /package.json
 .idea
 node_modules/*
-public/assets/*
-!public/assets/favicon.ico
+public/assets
