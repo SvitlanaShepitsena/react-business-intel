@@ -25,7 +25,7 @@ export default class Home extends React.Component {
                         <br/>
                         <YouTube
                             id="1"
-                            url={'https://www.youtube.com/watch?v=7klNQyyLpiA'}
+                            url={'https://youtu.be/xjX_-VjsUfU'}
                             opts={opts}
                             onPlay={this._onPlay}
                         />
