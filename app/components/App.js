@@ -9,7 +9,7 @@ export default class App extends React.Component {
     // Constructor
     constructor(props) {
         super(props);
-        this.state={location : this.props.location};
+        this.state = {location: this.props.location};
     }
 
     render() {
@@ -20,7 +20,6 @@ export default class App extends React.Component {
                 <Helmet
                     title="Web Application Startup Template with ReactJs"
                     meta={[
-                    {"name": "description", "content": "Helmet application"},
                     {"property": "og:title", "content": content},
                     {"property": "og:url", "content": `http://www.chicagowebapp.com${this.state.location.pathname}`},
                     {"property": "og:video", "content": `https://youtu.be/${youTubeId}`},
@@ -46,13 +45,16 @@ var styles = {
         color: '#393939',
         fontWeight: 500,
         fontFamily: "Segoe UI, Arial,sans-serif",
-        position: 'relative',
         marginLeft: 'auto',
         marginRight: 'auto',
         marginTop: 'auto',
         marginBottom: 'auto',
         width: 1240,
-        minHeight: 1220
+        minHeight: 1220,
+        position: 'relative',
+        overflow: 'hidden',
+        paddingBottom: 100,
+        height: 'auto'
     },
     footerStyles: {
         position: 'absolute',
