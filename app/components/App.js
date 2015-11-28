@@ -10,7 +10,6 @@ export default class App extends React.Component {
     constructor(props) {
         super(props);
         this.state={location : this.props.location};
-        console.log(this.props.location);
     }
 
     render() {

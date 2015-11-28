@@ -5,7 +5,7 @@
   "main": "index.js",
   "config": {
     "storageDatabaseUri": "mysql://user:password@localhost:3306/dbname",
-    "appWebpackBaseUrl": "http://www.chicagowebapp.com",
+    "appWebpackBaseUrl": "http://localhost:8080",
     "appWebpackBuildPath": "public",
     "appServerHost": "127.0.0.1",
     "appServerPort": 4444
