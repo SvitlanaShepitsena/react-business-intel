@@ -8,7 +8,10 @@ import {RoutingContext, match} from 'react-router';
 import routes from './routes';
 
 const env = process.env;
-const assetsPath = `${env.npm_package_config_appWebpackBaseUrl}/${env.npm_package_version}`;
+console.log(env.USER);
+var baseUrl=(env.USER && env.USER.indexOf('root')>-1)?'http://chicagowebapp.com/':`${env.npm_package_config_appWebpackBaseUrl}`;
+
+const assetsPath = `${baseUrl}/${env.npm_package_version}`;
 const publicPath = path.resolve('../public');
 
 let app = express();
@@ -17,8 +20,19 @@ app.set('x-powered-by', false);
 app.use(express.static(publicPath));
 
 global.navigator = {userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2454.85 Safari/537.36'};
+app.use((req,res,next)=>{
+    var url = req.originalUrl;
+    var lastPart = url.split('/').pop();
+    if (lastPart.indexOf('.')>-1) {
+        res.sendFile(lastPart, { root: path.join(__dirname, `../public/assets/${env.npm_package_version}/`) });
+    } else{
+        next();
+    }
+});
 
-app.use((req, res, next) => {
+app.get('/',(req, res, next) => {
+
+
     let location = createLocation(req.originalUrl);
 
     match({routes, location}, (error, redirectLocation, renderProps) => {
