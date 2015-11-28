@@ -6,15 +6,26 @@ import Toolbar from "./common/Toolbar";
 
 
 export default class App extends React.Component {
+    // Constructor
+    constructor(props) {
+        super(props);
+        this.state={location : this.props.location};
+    }
+
     render() {
-        let content = "ReactJs. Best Practices for Personal Webapps"
+        let content = "ReactJs. Best Practices for Personal Webapps";
+        let youTubeId = 'xjX_-VjsUfU';
         return (
             <div style={styles.mainContainerStyles}>
                 <Helmet
                     title="Web Application Startup Template with ReactJs"
                     meta={[
                     {"name": "description", "content": "Helmet application"},
-                    {"property": "og:title", "content": content}
+                    {"property": "og:title", "content": content},
+                    {"property": "og:url", "content": `http://www.chicagowebapp.com${this.state.location.pathname}`},
+                    {"property": "og:video", "content": `https://youtu.be/${youTubeId}`},
+                    {"property": "og:description", "content": "Web app template in details"},
+                    {"property": "og:image", "content": `http://img.youtube.com/vi/${youTubeId}/hqdefault.jpg`},
                 ]}
                 />
                 <div style={styles.asideStyles}>
