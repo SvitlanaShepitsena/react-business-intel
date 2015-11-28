@@ -9,7 +9,6 @@ export default class Home extends React.Component {
         const opts = {
             height: '490',
             width: '740',
-
             playerVars: {
                 autoplay: 0
             }
@@ -22,16 +21,29 @@ export default class Home extends React.Component {
                     <br/>
                     <div style={styles.iframeContainer}>
                         <h2 style={styles.pageHeaderStyles}>ReactJs. Best Practices for Personal Webapps</h2>
-                        <br/>
-                        <YouTube
-                            id="1"
-                            url={'https://youtu.be/xjX_-VjsUfU'}
-                            opts={opts}
-                            onPlay={this._onPlay}
-                        />
-                        <h3>1. Why ReactJs</h3>
-                        <p style={styles.pStyles}>
-                        </p>
+                        <div>
+                            <h3>1. Why ReactJs</h3>
+                            <YouTube
+                                id="1"
+                                url={'https://youtu.be/xjX_-VjsUfU'}
+                                opts={opts}
+                                onPlay={this._onPlay}
+                            />
+                            <p style={styles.pStyles}>
+                            </p>
+                        </div>
+                        <hr/>
+                        <div>
+                            <h3>2. React Initial Boilerplate</h3>
+                            <YouTube
+                                id="2"
+                                url={'https://youtu.be/_iLgaqbVLA4'}
+                                opts={opts}
+                                onPlay={this._onPlay}
+                            />
+                            <p style={styles.pStyles}>
+                            </p>
+                        </div>
                     </div>
 
 
@@ -43,12 +55,13 @@ export default class Home extends React.Component {
 ;
 var styles = {
     pageHeaderStyles: {
-        color: '#244762',
-        fontSize: 22
+        color: '#393939',
+        marginBottom: '10',
+        fontWeight: 500
     },
 
     iframeContainer: {
-        textAlign: 'center'
+        textAlign: 'left'
     },
     containerStyles: {
         padding: 10,
