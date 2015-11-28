@@ -20,13 +20,13 @@ export default class Home extends React.Component {
                 <div style={styles.containerStyles}>
                     <br/>
                     <div style={styles.iframeContainer}>
-                        <h2 style={styles.pageHeaderStyles}>ReactJs. Best Practices for Personal Webapps</h2>
+                        <span style={styles.colorPlaylist}>Youtube Playlist</span>
+                        <h2 style={styles.pageHeaderStyles}>
+                            ReactJs. Best Practices for Personal Webapps</h2>
                         <div>
                             <ul style={styles.ul}>
-                                <li style={styles.li}>Nov 24, 2015</li>
-                                <li style={styles.li}>
-                                    <h3>1. Why ReactJs</h3>
-                                </li>
+                                <li style={styles.li}><span style={styles.videoDate}>Nov 24, 2015</span></li>
+                                <li style={styles.li}><span style={styles.videoTitle}>1. Why ReactJs </span></li>
                             </ul>
                             <YouTube
                                 id="1"
@@ -39,7 +39,11 @@ export default class Home extends React.Component {
                         </div>
                         <hr/>
                         <div>
-                            <h3>2. React Initial Boilerplate</h3>
+                            <ul style={styles.ul}>
+                                <li style={styles.li}><span style={styles.videoDate}>Nov 28, 2015</span></li>
+                                <li style={styles.li}><span
+                                    style={styles.videoTitle}>2. React Initial Boilerplate </span></li>
+                            </ul>
                             <YouTube
                                 id="2"
                                 url={'https://youtu.be/_iLgaqbVLA4'}
@@ -65,10 +69,28 @@ var styles = {
         fontWeight: 500
     },
     ul: {
-        decoration: 'none'
+        decoration: 'none',
+        margin: 0,
+        marginBottom: 10,
+        padding: 0
+    },
+    colorPlaylist: {
+        fontSize: 20,
+        color: '#C62828',
     },
     li: {
-        display: 'inline'
+        display: 'inline',
+    },
+    videoDate: {
+        fontSize: 16,
+        color: "#797979",
+        fontWeight: 400
+    },
+    videoTitle: {
+        marginLeft: 20,
+        fontSize: 22,
+        color: "#555555",
+        fontWeight: 500
     },
 
     iframeContainer: {
