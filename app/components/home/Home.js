@@ -38,24 +38,7 @@ export default class Home extends React.Component {
                             </p>
                         </div>
                         <hr/>
-                        <div>
-                            <ul style={styles.ul}>
-                                <li style={styles.li}><span style={styles.videoDate}>Nov 28, 2015</span></li>
-                                <li style={styles.li}><span
-                                    style={styles.videoTitle}>2. React Initial Boilerplate </span></li>
-                            </ul>
-                            <YouTube
-                                id="2"
-                                url={'https://youtu.be/_iLgaqbVLA4'}
-                                opts={opts}
-                                onPlay={this._onPlay}
-                            />
-                            <p style={styles.pStyles}>
-                            </p>
-                        </div>
                     </div>
-
-
                 </div>
             </div>
         )
