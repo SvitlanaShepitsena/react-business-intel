@@ -6,8 +6,14 @@ import Toolbar from "./common/Toolbar";
 
 
 export default class App extends React.Component {
+    // Constructor
+    constructor(props) {
+        super(props);
+    }
+
     render() {
-        let content = "ReactJs. Best Practices for Personal Webapps"
+        let content = "ReactJs. Best Practices for Personal Webapps";
+        let youTubeId='xjX_-VjsUfU';
         return (
             <div style={styles.mainContainerStyles}>
                 <Helmet
@@ -15,8 +21,10 @@ export default class App extends React.Component {
                     meta={[
                     {"name": "description", "content": "Helmet application"},
                     {"property": "og:title", "content": content},
-                    {"property": "og:video", "content": "https://www.youtube.com/watch?v=7klNQyyLpiA"},
+                    {"property": "og:url", "content": `http://www.chicagowebapp.com${this.props.location}`},
+                    {"property": "og:video", "content": `https://youtu.be/${youTubeId}`},
                     {"property": "og:description", "content": "Web app template in details"},
+                    {"property": "og:image", "content": `http://img.youtube.com/vi/${youTubeId}/hqdefault.jpg`},
                 ]}
                 />
                 <div style={styles.asideStyles}>
