@@ -14,7 +14,8 @@ export default class App extends React.Component {
                     title="Web Application Startup Template with ReactJs"
                     meta={[
                     {"name": "description", "content": "Helmet application"},
-                    {"property": "og:title", "content": content}
+                    {"property": "og:title", "content": content},
+                    {"property": "og:description", "content": "Web app template in details"},
                 ]}
                 />
                 <div style={styles.asideStyles}>
