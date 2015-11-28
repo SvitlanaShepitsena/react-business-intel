@@ -15,6 +15,7 @@ export default class App extends React.Component {
                     meta={[
                     {"name": "description", "content": "Helmet application"},
                     {"property": "og:title", "content": content},
+                    {"property": "og:video", "content": "https://www.youtube.com/watch?v=7klNQyyLpiA"},
                     {"property": "og:description", "content": "Web app template in details"},
                 ]}
                 />
