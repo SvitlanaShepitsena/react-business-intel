@@ -10,7 +10,7 @@ import Logo from './Logo';
 export default class Aside extends React.Component {
     render() {
 
-        var links = ['about', 'contact'];
+        var links = ['abouts', 'contact'];
         return (
             <div style={[styles.base]}>
                 <Logo/>
