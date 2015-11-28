@@ -8,7 +8,6 @@ import {RoutingContext, match} from 'react-router';
 import routes from './routes';
 
 const env = process.env;
-console.log(env.USER);
 var baseUrl=(env.USER && env.USER.indexOf('root')>-1)?'http://chicagowebapp.com/':`${env.npm_package_config_appWebpackBaseUrl}`;
 
 const assetsPath = `${baseUrl}/${env.npm_package_version}`;
