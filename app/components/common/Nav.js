@@ -3,6 +3,9 @@ import {Link} from 'react-router';
 
 
 export default class Nav extends React.Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
         return (
             <ul style={styles.ulStyles}>

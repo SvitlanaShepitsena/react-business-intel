@@ -8,6 +8,9 @@ import Logo from './Logo';
 
 @Radium
 export default class Aside extends React.Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
 
         var links = ['about', 'contact'];

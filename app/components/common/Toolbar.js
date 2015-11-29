@@ -3,6 +3,9 @@ import Radium from 'radium';
 
 @Radium
 export default class Toolbar extends React.Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
         return (
             <div style={styles.appToolbar}>

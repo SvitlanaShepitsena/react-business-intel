@@ -5,7 +5,6 @@ import { render } from 'react-dom'
 import App from './components/App';
 import About from './components/about/About';
 import Contact from './components/contact/Contact';
-
 import Home from "./components/home/Home";
 
 export default (
