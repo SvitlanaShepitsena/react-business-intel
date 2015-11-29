@@ -6,7 +6,6 @@ import Toolbar from "./common/Toolbar";
 
 
 export default class App extends React.Component {
-    // Constructor
     constructor(props) {
         super(props);
         this.state = {location: this.props.location};

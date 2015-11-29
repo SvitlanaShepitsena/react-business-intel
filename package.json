@@ -15,7 +15,7 @@
     "appServerPort": 4444
   },
   "scripts": {
-    "app:webpack:start": "webpack-dev-server --hot --inline --progress --colors",
+    "app:webpack:start": "webpack-dev-server --hot --inline --progress --colors --quiet",
     "app:server:start:dev": "nodemon --exec babel-node -- scripts/server.js",
     "start": "babel-node scripts/server.js",
     "build": "webpack -p --progress",
@@ -38,6 +38,7 @@
     "history": "^1.12.5",
     "lodash": "^3.10.1",
     "mysql": "^2.9.0",
+    "open-browser-webpack-plugin": "0.0.1",
     "radium": "^0.15.3",
     "react": "^0.14.3",
     "react-dom": "^0.14.0",

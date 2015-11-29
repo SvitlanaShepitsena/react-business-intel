@@ -3,6 +3,12 @@ import Helmet from "react-helmet";
 import Toolbar from '../common/Toolbar';
 
 export default class About extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {location: this.props.location};
+    }
+
+
     render() {
         return (
             <div>

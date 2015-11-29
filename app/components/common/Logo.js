@@ -3,6 +3,10 @@ import {Link} from 'react-router';
 
 
 export default class Logo extends React.Component {
+    // Constructor
+    constructor(props) {
+        super(props);
+    }
     render() {
         return (
             <div style={styles.logoWrapper}>

@@ -4,6 +4,9 @@ import Toolbar from '../common/Toolbar';
 import YouTube from 'react-youtube';
 
 export default class Home extends React.Component {
+    constructor(props){
+        super(props);
+    }
 
     render() {
         const opts = {
@@ -22,7 +25,7 @@ export default class Home extends React.Component {
                     <div style={styles.iframeContainer}>
                         <span style={styles.colorPlaylist}>Youtube Playlist</span>
                         <h2 style={styles.pageHeaderStyles}>
-                            ReactJs. Best Practices for Personal Webapps</h2>
+                            ReactJs. Best Practices for Personal Webapps!</h2>
                         <div>
                             <ul style={styles.ul}>
                                 <li style={styles.li}><span style={styles.videoDate}>Nov 24, 2015</span></li>
