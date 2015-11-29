@@ -37,7 +37,7 @@ app.get('/', (req, res, next) => {
         if (renderProps == null) return next(error);
         /*method, that renders app.js component to string for server side*/
         let markup = renderToString(<RoutingContext {...renderProps}/>);
-        console.log(markup);
+        //console.log(markup);
         /*Helmet -  reusable React component that will manage all of your changes to the document head with support for document title, meta, link, script, and base tags.^/ */
         let helmet = Helmet.rewind();
         /*syntax ES6*/

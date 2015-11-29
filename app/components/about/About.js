@@ -8,6 +8,7 @@ export default class About extends React.Component {
             <div>
                 <Helmet title="About Our App"/>
                 <Toolbar title="About Component"/>
+                <p></p>
             </div>
         )
     }
