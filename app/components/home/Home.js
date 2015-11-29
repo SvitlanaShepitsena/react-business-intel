@@ -33,7 +33,7 @@ export default class Home extends React.Component {
                             </ul>
                             <YouTube
                                 id="1"
-                                url={'https://youtu.be/xjX_-VjsUfU'}
+                                url={'http://youtu.be/xjX_-VjsUfU'}
                                 opts={opts}
                                 onPlay={this._onPlay}
                             />
