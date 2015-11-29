@@ -15,7 +15,7 @@
     "appServerPort": 4444
   },
   "scripts": {
-    "app:webpack:start": "webpack-dev-server --hot --inline --progress --colors --quiet",
+    "app:webpack:start": "webpack-dev-server --hot --inline --progress --colors",
     "app:server:start:dev": "nodemon --exec babel-node -- scripts/server.js",
     "start": "babel-node scripts/server.js",
     "build": "webpack -p --progress",
