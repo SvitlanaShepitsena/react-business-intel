@@ -21,7 +21,7 @@ export default class App extends React.Component {
                     meta={[
                     {"property": "og:title", "content": content},
                     {"property": "og:url", "content": `http://www.chicagowebapp.com${this.state.location.pathname}`},
-                    {"property": "og:video", "content": `https://youtu.be/${youTubeId}`},
+                    {"property": "og:video", "content": `http://youtu.be/${youTubeId}`},
                     {"property": "og:description", "content": "Web app template in details"},
                     {"property": "og:image", "content": `http://img.youtube.com/vi/${youTubeId}/hqdefault.jpg`},
                 ]}
