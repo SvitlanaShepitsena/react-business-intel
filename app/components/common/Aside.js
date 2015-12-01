@@ -13,7 +13,7 @@ export default class Aside extends React.Component {
     }
     render() {
 
-        var links = ['articles', 'about', 'contact'];
+        var links = ['articles', 'about', 'contact','post'];
         return (
             <div style={[styles.base]}>
                 <Logo/>

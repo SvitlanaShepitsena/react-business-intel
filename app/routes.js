@@ -4,6 +4,7 @@ import { render } from 'react-dom'
 
 import App from './components/App';
 import About from './components/about/About';
+import ArticleForm from './components/common/ArticleForm';
 import Contact from './components/contact/Contact';
 import ArticleList from './components/article/ArticleList';
 import Article from './components/article/Article';
@@ -15,6 +16,7 @@ export default (
         <IndexRoute component={Home}/>
         <Route path="about" component={About}/>
         <Route path="contact" component={Contact}/>
+        <Route path="post" component={ArticleForm}/>
         <Route path="articles" component={ArticleList}>
             <Route path="/articles/:id" component={Article}/>
         </Route>
