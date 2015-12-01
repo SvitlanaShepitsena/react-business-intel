@@ -15,7 +15,6 @@ let server;
 if ((user === 'ec2-user' || user === 'root')) {
     server = router.listen(80);
 } else {
-    server = router.listen(port,host);
+    server = router.listen(port, host);
 }
-
 export default server;

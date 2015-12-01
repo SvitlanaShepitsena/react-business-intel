@@ -1,10 +1,10 @@
 import path from 'path';
 import express from 'express';
 import React from 'react';
-import {renderToString} from 'react-dom/server';
 import createLocation from 'history/lib/createLocation';
 import Helmet from 'react-helmet';
 import {RoutingContext, match} from 'react-router';
+import {renderToString, renderToStaticMarkup} from 'react-dom/server';
 import routes from './routes';
 
 const env = process.env;
@@ -20,7 +20,9 @@ app.use(express.static(publicPath));
 
 global.navigator = {userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2454.85 Safari/537.36'};
 app.use((req, res, next)=> {
+
     var url = req.originalUrl;
+    console.log(url);
     var lastPart = url.split('/').pop();
     if (lastPart.indexOf('.') > -1) {
         res.sendFile(lastPart, {root: path.join(__dirname, `../public/assets/${env.npm_package_version}/`)});
@@ -29,15 +31,15 @@ app.use((req, res, next)=> {
     }
 });
 
-app.get('/', (req, res, next) => {
+app.get('/*', (req, res, next) => {
     let location = createLocation(req.originalUrl);
     match({routes, location}, (error, redirectLocation, renderProps) => {
         if (redirectLocation) return res.redirect(redirectLocation.pathname);
         if (error) return next(error.message);
         if (renderProps == null) return next(error);
         /*method, that renders app.js component to string for server side*/
-        let markup = renderToString(<RoutingContext {...renderProps}/>);
-        //console.log(markup);
+        let markup = renderToStaticMarkup(<RoutingContext {...renderProps}/>);
+
         /*Helmet -  reusable React component that will manage all of your changes to the document head with support for document title, meta, link, script, and base tags.^/ */
         let helmet = Helmet.rewind();
         /*syntax ES6*/
@@ -52,7 +54,6 @@ app.get('/', (req, res, next) => {
             `<link rel="icon" media="all" type="image/x-icon" href="/favicon.ico"/>`,
             `</head>`,
             `<body>`,
-
             /* server side element*/
             `<div id="app">${markup}</div>`,
             `</body>`,

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import _ from 'lodash';
 import Toolbar from '../common/Toolbar';
 import YouTube from 'react-youtube';
@@ -16,7 +17,6 @@ export default class Home extends React.Component {
                 autoplay: 0
             }
         };
-
         return (
             <div>
                 <Toolbar title="Web Application Startup Template with ReactJs" sv="toolbarStyles"/>

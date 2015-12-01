@@ -13,7 +13,7 @@ export default class Aside extends React.Component {
     }
     render() {
 
-        var links = ['about', 'contact'];
+        var links = ['articles', 'about', 'contact'];
         return (
             <div style={[styles.base]}>
                 <Logo/>
@@ -32,6 +32,5 @@ var styles = {
         height: 'auto',
         minHeight: 1100
     },
-
 };
 
