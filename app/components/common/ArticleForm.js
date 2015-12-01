@@ -3,7 +3,7 @@ import Radium from 'radium';
 import Toolbar from '../common/Toolbar';
 import colors from '../../settings/colors.js';
 import layout from '../../settings/layout.js';
-import settings from '../../settings/settings.js';
+import settings from '../../settings/components.js';
 
 @Radium
 export default class ArticleForm extends React.Component {
@@ -47,7 +47,8 @@ export default class ArticleForm extends React.Component {
                             placeholder="Video URL"/>
                     </p>
                     <div>
-                        <input type="submit" style={[styles.buttonStyles]}/>
+                        <input type="submit"
+                               style={[styles.buttonStyles]}/>
                     </div>
                 </form>
             </div>
@@ -63,7 +64,6 @@ var styles = {
         color: '#fff',
         backgroundColor: colors.blue700,
         cursor: 'pointer',
-        display: 'inline-block',
         fontSize: 14,
         fontWeight: '400',
         lineHeight: 1.42857143,

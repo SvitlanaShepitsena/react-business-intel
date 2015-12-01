@@ -54,6 +54,7 @@ app.get('/*', (req, res, next) => {
             `<link rel="icon" media="all" type="image/x-icon" href="/favicon.ico"/>`,
             `</head>`,
             `<body>`,
+
             /* server side element*/
             `<div id="app">${markup}</div>`,
             `</body>`,

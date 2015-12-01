@@ -3,8 +3,10 @@ import {Link} from 'react-router';
 import Helmet from "react-helmet";
 import Aside from "./common/Aside";
 import Toolbar from "./common/Toolbar";
+import Radium, { Style } from 'radium'
 
 
+@Radium
 export default class App extends React.Component {
     constructor(props) {
         super(props);
@@ -35,6 +37,7 @@ export default class App extends React.Component {
                 <div style={styles.footerStyles}>
                     <Toolbar title="Footer content"/>
                 </div>
+
             </div>
         )
     }
