@@ -5,7 +5,6 @@ import Aside from "./common/Aside";
 import Toolbar from "./common/Toolbar";
 import Radium, { Style } from 'radium'
 import typography from '../settings/typography.js';
-import Skeleton from 'react-skeleton';
 
 
 @Radium
@@ -20,7 +19,12 @@ export default class App extends React.Component {
         let youTubeId = 'xjX_-VjsUfU';
         return (
             <div style={styles.mainContainerStyles}>
-                <Style rules={{ textarea: { fontFamily: typography.fontFamilySegoe } }}/>
+                <Style rules={{
+  textarea: {
+    fontFamily: typography.fontFamilySegoe
+  }
+}}
+                />
                 <Helmet
                     title="Web Application Startup Template with ReactJs"
                     meta={[
