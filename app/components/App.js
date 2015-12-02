@@ -5,6 +5,7 @@ import Aside from "./common/Aside";
 import Toolbar from "./common/Toolbar";
 import Radium, { Style } from 'radium'
 import typography from '../settings/typography.js';
+import Skeleton from 'react-skeleton';
 
 
 @Radium
