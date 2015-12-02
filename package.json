@@ -44,6 +44,7 @@
     "react-dom": "^0.14.0",
     "react-helmet": "^2.1.0",
     "react-router": "^1.0.0-rc3",
+    "react-skeleton": "^1.0.2",
     "react-youtube": "^4.1.2",
     "sequelize": "^3.12.1",
     "sequelize-cli": "git+https://github.com/xpepermint/cli.git",
