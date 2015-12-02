@@ -19,12 +19,7 @@ export default class App extends React.Component {
         let youTubeId = 'xjX_-VjsUfU';
         return (
             <div style={styles.mainContainerStyles}>
-                <Style rules={{
-  textarea: {
-    fontFamily: typography.fontFamilySegoe
-  }
-}}
-                />
+                <Style rules={{ textarea: { fontFamily: typography.fontFamilySegoe } }}/>
                 <Helmet
                     title="Web Application Startup Template with ReactJs"
                     meta={[

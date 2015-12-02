@@ -4,6 +4,7 @@ import Toolbar from '../common/Toolbar';
 import colors from '../../settings/colors.js';
 import layout from '../../settings/layout.js';
 import settings from '../../settings/components.js';
+var TextInput = belle.TextInput;
 
 @Radium
 export default class ArticleForm extends React.Component {
