@@ -7,7 +7,6 @@ import Radium, { Style } from 'radium'
 import typography from '../settings/typography.js';
 
 
-
 @Radium
 export default class App extends React.Component {
     constructor(props) {
@@ -19,7 +18,8 @@ export default class App extends React.Component {
         let content = "ReactJs. Best Practices for Personal Webapps";
         let youTubeId = 'xjX_-VjsUfU';
         return (
-            <div style={styles.mainContainerStyles}>
+            <div className="container">
+
                 <Style rules={{ textarea: { fontFamily: typography.fontFamilySegoe } }}/>
                 <Helmet
                     title="Web Application Startup Template with ReactJs"
@@ -31,51 +31,16 @@ export default class App extends React.Component {
                     {"property": "og:image", "content": `http://img.youtube.com/vi/${youTubeId}/hqdefault.jpg`},
                 ]}
                 />
-                <div style={styles.asideStyles}>
-                    <Aside/>
+                <div className="row">
+                    <div className="three columns">
+                        <Aside/>
+                    </div>
+                    <div className="nine columns">
+                        {this.props.children}
+                    </div>
                 </div>
-                <div style={styles.mainContentStyles}>
-                    {this.props.children}
-                </div>
-                <div style={styles.footerStyles}>
-                    <Toolbar title="Footer content"/>
-                </div>
-
             </div>
         )
     }
-};
-var styles = {
-    mainContainerStyles: {
-        color: '#393939',
-        fontWeight: 500,
-        fontFamily: "Segoe UI, Arial,sans-serif",
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        marginTop: 'auto',
-        marginBottom: 'auto',
-        width: 1240,
-        minHeight: 1220,
-        position: 'relative',
-        overflow: 'hidden',
-        paddingBottom: 100,
-        height: 'auto'
-    },
-    footerStyles: {
-        position: 'absolute',
-        minHeight: 90,
-        minWidth: '100%',
-        bottom: 0
-    },
-    asideStyles: {
-        float: 'left'
-    },
-    mainContentStyles: {
-        fontFamily: typography.fontFamilySegoe,
-        float: 'left',
-        width: 980,
-        marginLeft: 10,
-        marginRight: 10
-    },
 };
 

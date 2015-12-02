@@ -18,27 +18,13 @@ export default class Home extends React.Component {
         };
         return (
             <div>
-                <Toolbar title="Web Application Startup Template with ReactJs" sv="toolbarStyles"/>
-                <div style={styles.containerStyles}>
+                <Toolbar title="Web Application Startup Templatdde with ReactJs" sv="toolbarStyles"/>
+                <div >
                     <br/>
-                    <div style={styles.iframeContainer}>
+                    <div >
                         <span style={styles.colorPlaylist}>Youtube Playlist</span>
                         <h2 style={styles.pageHeaderStyles}>
                             ReactJs. Best Practices for Personal Webapps!</h2>
-                        <div>
-                            <ul style={styles.ul}>
-                                <li style={styles.li}><span style={styles.videoDate}>Nov 24, 2015</span></li>
-                                <li style={styles.li}><span style={styles.videoTitle}>1. Why ReactJs </span></li>
-                            </ul>
-                            <YouTube
-                                id="1"
-                                url={'http://youtu.be/xjX_-VjsUfU'}
-                                opts={opts}
-                                onPlay={this._onPlay}
-                            />
-                            <p style={styles.pStyles}>
-                            </p>
-                        </div>
                         <hr/>
                     </div>
                 </div>
