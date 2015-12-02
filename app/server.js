@@ -51,7 +51,7 @@ app.get('/*', (req, res, next) => {
             helmet.meta,
             helmet.link,
             `<meta charset="utf-8"/>`,
-            `<link rel="stylesheet" href="${assetsPath}/bootstrap.css"/>`,
+            `<link rel="stylesheet" href="${assetsPath}/app.css"/>`,
             `</head>`,
             `<body>`,
 

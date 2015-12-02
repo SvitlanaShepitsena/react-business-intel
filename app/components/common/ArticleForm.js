@@ -4,7 +4,7 @@ import Toolbar from '../common/Toolbar';
 import colors from '../../settings/colors.js';
 import layout from '../../settings/layout.js';
 import settings from '../../settings/components.js';
-import { Button } from  'react-bootstrap/lib';
+
 @Radium
 export default class ArticleForm extends React.Component {
     constructor(props) {
@@ -49,7 +49,7 @@ export default class ArticleForm extends React.Component {
                     <div>
                         <input type="submit"
                                style={[styles.buttonStyles]}/>
-                        <Button>Default</Button>
+
                     </div>
                 </form>
             </div>
