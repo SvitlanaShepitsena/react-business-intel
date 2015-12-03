@@ -19,7 +19,6 @@ export default class App extends React.Component {
         let youTubeId = 'xjX_-VjsUfU';
         return (
             <div className="container">
-
                 <Style rules={{ textarea: { fontFamily: typography.fontFamilySegoe } }}/>
                 <Helmet
                     title="Web Application Startup Template with ReactJs"
@@ -32,7 +31,7 @@ export default class App extends React.Component {
                 ]}
                 />
                 <div className="row">
-                    <div className="three columns">
+                    <div className=" three columns">
                         <Aside/>
                     </div>
                     <div className="nine columns">
