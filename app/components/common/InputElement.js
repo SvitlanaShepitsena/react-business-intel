@@ -4,45 +4,38 @@ import Toolbar from '../common/Toolbar';
 import colors from '../../settings/colors.js';
 import layout from '../../settings/layout.js';
 import settings from '../../settings/components.js';
-import connectToStores from 'alt/utils/connectToStores';
-import ArticleStore from '../stores/ArticleStore';
-import FormGroup from './FormGroup';
+import Actions from '../actions/actions';
 
 @Radium
-@connectToStores
-export default class ArticleForm extends React.Component {
+export default class InputElement extends React.Component {
     constructor(props) {
         super(props);
 
     }
 
-
-    static getStores() {
-        return [ArticleStore];
+    updateLocal(event) {
+        Actions.update(event);
     }
-
-    static getPropsFromStores() {
-        return ArticleStore.getState();
-    }
-
-
 
     render() {
         return (
-            <div>
-                <Toolbar title="New Article"/>
-                <form>
-                    <FormGroup/>
-                </form>
-                <div>
-                    {this.props.title}
-                </div>
-            </div>
+            <p>
+                <input
+                    style={styles.titleStyles}
+                    placeholder="Title"
+                    defaultValue={this.props.title}
+                    onChange={this.updateLocal}
+
+                />
+            </p>
         )
     }
 };
 
 var styles = {
+    main:{
+     border:'3 solid red'
+    },
     buttonStyles: {
         backgroundImage: 'none',
         border: '1px solid transparent',

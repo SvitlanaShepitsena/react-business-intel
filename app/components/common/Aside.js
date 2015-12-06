@@ -6,10 +6,22 @@ import {Link} from 'react-router';
 import Nav from './Nav';
 import Logo from './Logo';
 
+import connectToStores from 'alt/utils/connectToStores';
+import ArticleStore from '../stores/ArticleStore';
+
+@connectToStores
 @Radium
 export default class Aside extends React.Component {
     constructor(props) {
         super(props);
+    }
+
+    static getStores() {
+        return [ArticleStore];
+    }
+
+    static getPropsFromStores() {
+        return ArticleStore.getState();
     }
     render() {
 
@@ -18,6 +30,9 @@ export default class Aside extends React.Component {
             <div style={[styles.base]}>
                 <Logo/>
                 <Nav links={links}/>
+                <div>
+                    {this.props.title}
+                </div>
             </div>
         )
     }
