@@ -9,6 +9,13 @@ import settings from '../../settings/components.js';
 export default class ArticleForm extends React.Component {
     constructor(props) {
         super(props);
+        this.state={
+            title:''
+        }
+
+    }
+    update(){
+        this.setState(this.state);
     }
 
     render() {
@@ -19,39 +26,16 @@ export default class ArticleForm extends React.Component {
                     <p>
                         <input
                             style={styles.titleStyles}
-                            placeholder="Title"/>
-                    </p>
-                    <p>
-                        <textarea
-                            style={styles.contentStyles}
-                            cols="86"
-                            type="text"
-                            placeholder="Article Content"/>
-                    </p>
-                    <p>
-                        <label htmlFor="picturesUpload">Upload Pictures</label>
-                    </p>
-                    <p>
-                        <input
-                            name="picturesUpload"
-                            label="File input"
-                            type="file"/>
-                    </p>
-                    <p>
-                        <label style={[styles.base]} htmlFor="videoUrl">Embed Video</label>
-                    </p>
-                    <p>
-                        <input
-                            name="videoUrl"
-                            style={styles.titleStyles}
-                            placeholder="Video URL"/>
-                    </p>
-                    <div>
-                        <input type="submit"
-                               style={[styles.buttonStyles]}/>
+                            placeholder="Title"
+                            defaultValue={this.state.title}
+                            onChange={this.update.bind(this)}
 
-                    </div>
+                        />
+                    </p>
                 </form>
+                <div>
+                    {this.state.title}
+                </div>
             </div>
         )
     }
