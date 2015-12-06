@@ -29,6 +29,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "alt": "^0.17.9",
     "babel": "^5.8.23",
     "babel-runtime": "^5.8.25",
     "express": "^4.13.3",
