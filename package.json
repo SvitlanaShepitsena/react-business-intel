@@ -18,7 +18,7 @@
     "app:webpack:start": "webpack-dev-server --hot --inline --progress --colors",
     "app:server:start:dev": "nodemon --exec babel-node -- scripts/server.js",
     "start": "babel-node scripts/server.js",
-    "build": "webpack -p --progress --profile --json > modules.json",
+    "build": "webpack -p --progress --sort-modules-by",
     "storage:db:migrate": "sequelize db:migrate --url $npm_package_config_storageDatabaseUri --models-path ./storage/models --migrations-path ./storage/migrations",
     "storage:db:rollback": "sequelize db:migrate:undo --url $npm_package_config_storageDatabaseUri --models-path ./storage/models --migrations-path ./storage/migrations",
     "storage:db:seed": "babel-node ./storage/seed.js",
