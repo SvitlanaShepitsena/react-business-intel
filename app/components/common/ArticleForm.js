@@ -13,10 +13,7 @@ import FormGroup from './FormGroup';
 export default class ArticleForm extends React.Component {
     constructor(props) {
         super(props);
-
     }
-
-
     static getStores() {
         return [ArticleStore];
     }
@@ -24,8 +21,6 @@ export default class ArticleForm extends React.Component {
     static getPropsFromStores() {
         return ArticleStore.getState();
     }
-
-
 
     render() {
         return (

@@ -17,7 +17,6 @@ export default class FormGroup extends React.Component {
     render() {
         return (
             <div style={styles.main}>
-
             <InputElement/>
             </div>
         )
