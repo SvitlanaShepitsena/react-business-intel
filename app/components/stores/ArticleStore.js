@@ -1,7 +1,6 @@
 import alt from '../alt';
 import Actions from '../actions/actions';
 import {decorate, bind, datasource} from 'alt/utils/decorators';
-import mongoose from 'mongoose';
 
 @decorate(alt)
 class ArticleStore {
