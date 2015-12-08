@@ -3,7 +3,14 @@ import alt from '../alt';
 class Actions {
     constructor() {
         this.generateActions(
-            'update'
+            'articlesReceived',
+            'articlesFailed',
+            'articlesLoading',
+            'postArticle',
+            'postArticleSuccess',
+            'postArticleError',
+            'articleReceived'
+
         );
     }
 }

@@ -25,7 +25,6 @@ export default class InputElement extends React.Component {
                     placeholder="Title"
                     defaultValue={this.props.title}
                     onChange={this.updateLocal}
-
                 />
             </p>
         )
@@ -33,8 +32,8 @@ export default class InputElement extends React.Component {
 };
 
 var styles = {
-    main:{
-     border:'3 solid red'
+    main: {
+        border: '3 solid red'
     },
     buttonStyles: {
         backgroundImage: 'none',

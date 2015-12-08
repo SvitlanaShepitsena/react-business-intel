@@ -1,21 +1,20 @@
 import React from 'react';
 
 import Toolbar from '../common/Toolbar';
-import YouTube from 'react-youtube';
+import ArticleList from '../article/ArticleList';
+
+
 
 export default class Home extends React.Component {
     constructor(props) {
         super(props);
     }
 
+
+
+
     render() {
-        const opts = {
-            height: '490',
-            width: '740',
-            playerVars: {
-                autoplay: 0
-            }
-        };
+
         return (
             <div>
                 <Toolbar title="Web Application Startup Template with ReactJs" sv="toolbarStyles"/>
@@ -26,6 +25,7 @@ export default class Home extends React.Component {
                         <h2 style={styles.pageHeaderStyles}>
                             ReactJs. Best Practices for Personal Webapps!</h2>
                         <hr/>
+                        <ArticleList/>
                     </div>
                 </div>
             </div>

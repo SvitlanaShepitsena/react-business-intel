@@ -1,54 +1,89 @@
 import React from 'react';
-import Article from './Article';
-import {Link} from 'react-router';
 
+import Toolbar from '../common/Toolbar';
+import YouTube from 'react-youtube';
+import Article from './Article';
+
+import connectToStores from 'alt/utils/connectToStores';
+import ArticleStore from '../stores/ArticleStore';
+
+@connectToStores
 export default class ArticleList extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            articles: [
-                {
-                    id: 1,
-                    title: 'Article 1',
-                    body: 'Body of article 1'
-                },
-                {
-                    id: 2,
-                    title: 'Article 2',
-                    body: 'Body of article 2'
-                }
-            ]
-        };
+    }
+
+    static getStores() {
+        return [ArticleStore];
+    }
+
+    static getPropsFromStores() {
+        return ArticleStore.getState();
+    }
+
+    componentDidMount() {
+        ArticleStore.getArticles();
     }
 
     render() {
         return (
             <div>
-                {/* Parent view if no children */}
-                {!this.props.children &&
-                <ul>
-                    {this.state.articles.map((article, i)=> {
-                        return (
-                            <li key={i}><Link to={`/articles/${article.id}`}>{article.title}</Link>
+                {Object.keys(this.props.articles).map((key)=> {
+                    let article = this.props.articles[key];
+                    console.log(article.key);
 
-                            </li>
-                        )
-                    })}
-                </ul>
-                }
-
-                {/* Child view */}
-                <div>
-                    {this.props.children}
-                </div>
+                    return (
+                        <Article key={key} fbArticle={article}/>
+                    );
+                })}
             </div>
         )
     }
-}
-;
-var arr1 = [1, 2, 3];
+};
+var styles = {
+    pageHeaderStyles: {
+        color: '#393939',
+        marginBottom: '10',
+        fontWeight: 500
+    },
+    ul: {
+        decoration: 'none',
+        margin: 0,
+        marginBottom: 10,
+        padding: 0
+    },
+    colorPlaylist: {
+        fontSize: 20,
+        color: '#C62828',
+    },
+    li: {
+        display: 'inline',
+    },
+    videoDate: {
+        fontSize: 16,
+        color: "#797979",
+        fontWeight: 400
+    },
+    videoTitle: {
+        marginLeft: 20,
+        fontSize: 22,
+        color: "#555555",
+        fontWeight: 500
+    },
 
-arr1.map((el)=> {
-    return el * 10;
-})
-
+    iframeContainer: {
+        textAlign: 'left'
+    },
+    containerStyles: {
+        padding: 10,
+        backgroundColor: 'whitesmoke',
+        display: 'block',
+        height: 'auto'
+    },
+    pStyles: {
+        display: 'block',
+        fontSize: 14,
+        lineHeight: 2,
+        paddingLeft: 20
+    },
+};
