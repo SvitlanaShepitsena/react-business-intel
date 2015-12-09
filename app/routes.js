@@ -4,7 +4,7 @@ import { render } from 'react-dom'
 
 import App from './components/App';
 import About from './components/about/About';
-import ArticleForm from './components/common/ArticleForm';
+import ArticleForm from './components/article/ArticleForm.js';
 import Contact from './components/contact/Contact';
 import ArticleList from './components/article/ArticleList';
 import Article from './components/article/Article';

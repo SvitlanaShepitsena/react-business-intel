@@ -1,19 +1,25 @@
 import React from 'react';
 import Radium from 'radium';
+import connectToStores from '../../../node_modules/alt/utils/connectToStores';
+import ArticleStore from '../stores/ArticleStore.js';
+/*App Components*/
 import Toolbar from '../common/Toolbar';
+import ArticleTitle from './ArticleTitle';
+import ArticleContent from './ArticleContent';
+import UploadPictures from './../common/UploadPictures';
+import AddVideo from './../common/AddVideo';
+import Button from './../common/Button.js';
+/*Styles*/
 import colors from '../../settings/colors.js';
 import layout from '../../settings/layout.js';
-import settings from '../../settings/components.js';
-import connectToStores from 'alt/utils/connectToStores';
-import ArticleStore from '../stores/ArticleStore';
-import FormGroup from './FormGroup';
 
-@Radium
 @connectToStores
+@Radium
 export default class ArticleForm extends React.Component {
     constructor(props) {
         super(props);
     }
+
     static getStores() {
         return [ArticleStore];
     }
@@ -23,11 +29,23 @@ export default class ArticleForm extends React.Component {
     }
 
     render() {
+        let svState = false;
         return (
             <div>
                 <Toolbar title="New Article"/>
                 <form>
-                    <FormGroup/>
+                    <Button kind="success" name="Great Button">Radium Button</Button>
+                    <ArticleTitle/>
+                    <ArticleContent/>
+                    <UploadPictures/>
+                    <AddVideo/>
+                    <input
+                        style={[
+                        styles.buttonStyles,
+                        svState && styles.testStyle
+                        ]}
+                        type="submit"
+                    />
                 </form>
                 <div>
                     {this.props.title}
@@ -38,12 +56,25 @@ export default class ArticleForm extends React.Component {
 };
 
 var styles = {
+    base: {
+        color: colors.blue600
+    },
+    testStyle: {
+        backgroundColor: 'brown'
+    },
+    primary: {
+        background: '#0074D9'
+    },
+
+    warning: {
+        background: '#FF4136'
+    },
     buttonStyles: {
         backgroundImage: 'none',
         border: '1px solid transparent',
         borderRadius: 4,
-        color: '#fff',
-        backgroundColor: colors.blue700,
+        color: 'green',
+        backgroundColor: 'yellow',
         cursor: 'pointer',
         fontSize: 14,
         fontWeight: '400',
@@ -68,20 +99,5 @@ var styles = {
             backgroundColor: '#005299',
             transform: 'translateY(1px)',
         },
-    },
-    base: {
-        color: colors.blue600
-    },
-    titleStyles: {
-        color: '#1E88E5',
-        lineHeight: 1.5,
-        padding: layout.padding5,
-        width: 600
-    },
-    contentStyles: {
-        display: 'block',
-        height: '100%',
-        padding: layout.padding5,
-        minHeight: 300
     },
 };

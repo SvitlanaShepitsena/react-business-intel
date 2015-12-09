@@ -1,6 +1,8 @@
 import React from 'react';
 
+import Helmet from "react-helmet";
 import Toolbar from '../common/Toolbar';
+
 import YouTube from 'react-youtube';
 import Article from './Article';
 
@@ -28,6 +30,8 @@ export default class ArticleList extends React.Component {
     render() {
         return (
             <div>
+                <Helmet title="Our Tutorials"/>
+                <Toolbar title="Articles Component"/>
                 {Object.keys(this.props.articles).map((key)=> {
                     let article = this.props.articles[key];
                     console.log(article.key);

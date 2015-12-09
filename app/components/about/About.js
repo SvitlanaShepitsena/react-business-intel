@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from "react-helmet";
 import Toolbar from '../common/Toolbar';
-import ArticleForm from '../common/ArticleForm';
+import ArticleForm from '../article/ArticleForm.js';
 
 export default class About extends React.Component {
     /* Run extended class constructor. Required in ES6*/
