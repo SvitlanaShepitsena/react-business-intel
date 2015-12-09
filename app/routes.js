@@ -12,7 +12,6 @@ import Home from "./components/home/Home";
 
 export default (
     <Route path="/" component={App}>
-        {/* allows you to have Home be a first class route component with IndexRoute*/}
         <IndexRoute component={Home}/>
         <Route path="about" component={About}/>
         <Route path="contact" component={Contact}/>
