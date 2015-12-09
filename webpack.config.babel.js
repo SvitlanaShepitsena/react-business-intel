@@ -26,8 +26,13 @@ let config = {
             {test: /\.styl$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader!stylus-loader')},
         ]
     },
+    watchOptions: {
+        aggregateTimeout: 100,
+        poll: 1000
+    },
     plugins: [
         new webpack.NoErrorsPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
         new webpack.EnvironmentPlugin(Object.keys(env)),
         new OpenBrowserPlugin({url: 'http://localhost:4444'}),
         new ExtractTextPlugin('[name].css')

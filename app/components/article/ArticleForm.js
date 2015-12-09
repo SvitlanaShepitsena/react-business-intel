@@ -32,7 +32,7 @@ export default class ArticleForm extends React.Component {
         let svState = false;
         return (
             <div>
-                <Toolbar title="New Article"/>
+                <Toolbar title="New Artic"/>
                 <form>
                     <Button kind="success" name="Great Button">Radium Button</Button>
                     <ArticleTitle/>

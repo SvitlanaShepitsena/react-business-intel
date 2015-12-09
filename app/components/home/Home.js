@@ -10,9 +10,6 @@ export default class Home extends React.Component {
         super(props);
     }
 
-
-
-
     render() {
 
         return (
