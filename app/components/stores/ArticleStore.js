@@ -1,6 +1,10 @@
 import alt from '../alt';
 import Actions from '../actions/actions';
 import ArticleSource from '../sources/ArticleSource'
+
+
+
+
 import {decorate, bind, datasource} from 'alt/utils/decorators';
 
 
@@ -12,6 +16,12 @@ class ArticleStore {
             articles: [],
             articlesLoading: true
         };
+
+        this.on('init', this.bootstrap);
+        this.on('bootstrap', this.bootstrap);
+    }
+
+    bootstrap() {
     }
 
     @bind(Actions.articlesLoading)
