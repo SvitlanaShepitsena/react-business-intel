@@ -33,7 +33,6 @@ var styles = {
     default: {
         background: colors.grey100,
         boxShadow: '0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.084)',
-        display: 'block',
         fontWeight: 500,
         width: 'auto',
         color: colors.grey800
@@ -48,31 +47,35 @@ var styles = {
         color: colors.blue50
     },
     xl: {
+        height: 56,
         paddingLeft: 26,
         paddingRight: 26,
-        height: 56,
         lineHeight: 1.5,
         fontSize: 16
     },
     lg: {
+        height: 40,
         paddingLeft: 16,
         paddingRight: 16,
         lineHeight: 1.3,
         fontSize: 14
     },
     md: {
+        height: 36,
         paddingLeft: 14,
         paddingRight: 14,
         lineHeight: 1,
         fontSize: 13
     },
     sm: {
+        height: 30,
         paddingLeft: 12,
         paddingRight: 12,
         fontSize: 12,
         lineHeight: .8,
     },
     xs: {
+        height: 24,
         paddingLeft: 10,
         paddingRight: 10,
         fontSize: 11,
