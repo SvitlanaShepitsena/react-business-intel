@@ -30,14 +30,23 @@ export default class Button extends React.Component {
 
 }
 var styles = {
+    iconBase: {
+        verticalAlign: "middle",
+        display: 'inline-block'
+    },
     default: {
         background: colors.grey100,
         color: colors.grey800
     },
     fab: {
-        width: 32,
+        fontSize: '22px',
+        padding: 6,
+        margin: 8,
+        lineHeight: '56px',
+        boxShadow: 'rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px',
+        width: 56,
+        height: 56,
         display: 'block',
-        height: 32,
         borderRadius: '50% '
     },
     warning: {
