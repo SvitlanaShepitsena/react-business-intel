@@ -9,6 +9,7 @@ import ArticleContent from './ArticleContent';
 import UploadPictures from './../common/UploadPictures';
 import AddVideo from './../common/AddVideo';
 import Button from './../common/Button';
+import ButtonFab from './../common/ButtonFab';
 /*Styles*/
 import colors from '../../settings/colors.js';
 import layout from '../../settings/layout.js';
@@ -35,9 +36,20 @@ export default class ArticleForm extends React.Component {
             <div>
                 <Toolbar title="New Article "/>
                 <form>
-                    <Button type="fab" kind="warning">
-                        <Code/>
-                    </Button>
+                    <ul style={[styles.listUnstyled]}>
+                        <li style={[styles.listInline]}>
+                            <Button size="xs" kind="primary">
+                                <Code style={{marginRight:4,marginBottom:2}}/>
+                                Code
+                            </Button>
+                        </li>
+                        <li style={[styles.listInline]}>
+                            <Button size="sm" kind="primary">
+                                <Code style={{marginRight:4,marginBottom:2}}/>
+                                Code
+                            </Button>
+                        </li>
+                    </ul>
                     <ArticleTitle/>
                     <ArticleContent/>
                     <UploadPictures/>
@@ -47,6 +59,17 @@ export default class ArticleForm extends React.Component {
         )
     }
 };
+var styles = {
+    listUnstyled: {
+        decoration: 'none',
+        verticalAlign: 'top'
 
+    },
+    listInline: {
+        display: 'inline-block',
+        margin: '4px'
+    },
+
+};
 
 

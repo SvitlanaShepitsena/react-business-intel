@@ -4,7 +4,7 @@ import Radium from 'radium';
 import colors from '../../settings/colors.js';
 
 @Radium
-export default class Button extends React.Component {
+export default class ButtonFab extends React.Component {
     // Constructor
     constructor(props) {
         // Running constructor of Parent (React.Component) for binding this to object.
@@ -21,7 +21,7 @@ export default class Button extends React.Component {
         return (
             <div>
                 <button
-                    style={[styles.default, styles[this.props.size], styles[this.props.type],styles[this.props.kind]]}>
+                    style={[styles.default, styles[this.props.size], styles[this.props.kind]]}>
                     {this.props.children}
                 </button>
             </div>
@@ -31,11 +31,13 @@ export default class Button extends React.Component {
 }
 var styles = {
     default: {
-        background: colors.grey100,
-        boxShadow: '0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.084)',
+        position: 'relative',
         display: 'block',
-        fontWeight: 500,
-        width: 'auto',
+        padding: 2,
+        margin: 8,
+        boxShadow: 'rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px',
+        borderRadius: '50% ',
+        background: colors.grey100,
         color: colors.grey800
     },
     warning: {
@@ -43,40 +45,39 @@ var styles = {
         color: colors.red50
     },
     primary: {
-        border: 0,
         background: colors.blue500,
         color: colors.blue50
     },
     xl: {
-        paddingLeft: 26,
-        paddingRight: 26,
+        width: 56,
         height: 56,
         lineHeight: 1.5,
-        fontSize: 16
+        fontSize: 20
+
     },
     lg: {
-        paddingLeft: 16,
-        paddingRight: 16,
+        width: 40,
+        height: 40,
         lineHeight: 1.3,
-        fontSize: 14
+        fontSize: 18
     },
     md: {
-        paddingLeft: 14,
-        paddingRight: 14,
+        width: 36,
+        height: 36,
         lineHeight: 1,
-        fontSize: 13
+        fontSize: 16
     },
     sm: {
-        paddingLeft: 12,
-        paddingRight: 12,
-        fontSize: 12,
+        width: 30,
+        fontSize: 15,
         lineHeight: .8,
+        height: 30
     },
     xs: {
-        paddingLeft: 10,
-        paddingRight: 10,
-        fontSize: 11,
+        width: 26,
+        fontSize: 13,
         lineHeight: .6,
+        height: 26
     },
 
 };
