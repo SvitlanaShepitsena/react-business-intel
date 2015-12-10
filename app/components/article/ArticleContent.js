@@ -36,6 +36,6 @@ var styles = {
         display: 'block',
         height: '100%',
         padding: layout.padding5,
-        minHeight: 300
+        minHeight: 200
     },
 };

@@ -1,5 +1,17 @@
 class Colors {
     constructor() {
+        /*=Grey*/
+        this.grey50 = '#FAFAFA';
+        this.grey100 = '#F5F5F5';
+        this.grey200 = '#EEEEEE';
+        this.grey300 = '#E0E0E0';
+        this.grey400 = '#BDBDBD';
+        this.grey500 = '#9E9E9E';
+        this.grey600 = '#757575';
+        this.grey700 = '#616161';
+        this.grey800 = '#424242';
+        this.grey900 = '#212121';
+
         /*=Blue*/
         this.blue50 = '#E3F2FD';
         this.blue100 = '#BBDEFB';

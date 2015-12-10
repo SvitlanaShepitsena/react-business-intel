@@ -8,6 +8,7 @@ import ArticleTitle from './ArticleTitle';
 import ArticleContent from './ArticleContent';
 import UploadPictures from './../common/UploadPictures';
 import AddVideo from './../common/AddVideo';
+import Button from './../common/Button';
 /*Styles*/
 import colors from '../../settings/colors.js';
 import layout from '../../settings/layout.js';
@@ -32,6 +33,7 @@ export default class ArticleForm extends React.Component {
             <div>
                 <Toolbar title="New Article "/>
                 <form>
+                    <Button type="fab" kind="warning" >r</Button>
                     <ArticleTitle/>
                     <ArticleContent/>
                     <UploadPictures/>
