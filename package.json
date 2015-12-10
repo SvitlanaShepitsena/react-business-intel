@@ -38,7 +38,6 @@
     "firebase": "^2.3.2",
     "graphql": "^0.4.7",
     "history": "^1.12.5",
-    "immutable": "^3.7.5",
     "iso": "^5.0.0",
     "radium": "^0.15.3",
     "react": "^0.14.3",
