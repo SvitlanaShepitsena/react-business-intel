@@ -23,9 +23,10 @@ export default class Aside extends React.Component {
     static getPropsFromStores() {
         return ArticleStore.getState();
     }
+
     render() {
 
-        var links = ['articles', 'about', 'contact','post'];
+        var links = ['articles', 'about', 'contact', 'post', 'design'];
         return (
             <div style={[styles.base]}>
                 <Logo/>
