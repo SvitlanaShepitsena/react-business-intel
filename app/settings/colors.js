@@ -57,8 +57,21 @@ class Colors {
         this.greenA200 = '#69F0AE';
         this.greenA400 = '#00E676';
         this.greenA700 = '#00C853';
-
-
+        /*=Orange*/
+        this.orange50 = '#FFF3E0';
+        this.orange100 = '#FFE0B2';
+        this.orange200 = '#FFCC80';
+        this.orange300 = '#FFB74D';
+        this.orange400 = '#FFA726';
+        this.orange500 = '#FF9800';
+        this.orange600 = '#FB8C00';
+        this.orange700 = '#F57C00';
+        this.orange800 = '#EF6C00';
+        this.orange900 = '#E65100';
+        this.orangeA100 = '#FFD180';
+        this.orangeA200 = '#FFAB40';
+        this.orangeA400 = '#FF9100';
+        this.orangeA700 = '#FF6D00';
     }
 }
 // creating object

@@ -40,13 +40,21 @@ var styles = {
         background: colors.grey100,
         color: colors.grey800
     },
-    warning: {
-        background: colors.red500,
-        color: colors.red50
-    },
     primary: {
         background: colors.blue500,
         color: colors.blue50
+    },
+    success: {
+        background: colors.green500,
+        color: colors.green50
+    },
+    warning: {
+        background: colors.orange500,
+        color: colors.orange50
+    },
+    danger: {
+        background: colors.red500,
+        color: colors.red50
     },
     xl: {
         width: 56,
