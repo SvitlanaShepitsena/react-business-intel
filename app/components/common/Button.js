@@ -21,11 +21,12 @@ export default class Button extends React.Component {
         return (
             <div key="wrapper" style={[styles.wrapper]}>
                 <button key="base"
-                        style={[styles.base, styles[this.props.size], styles[this.props.type],styles[this.props.kind]]}>
+                        style={[styles.base, styles[this.props.size], styles[this.props.type],styles[this.props.kind] ]}
+                >
                     {this.props.children}
                 </button>
                 {Radium.getState(this.state, 'base', ':hover') ? (
-                    <span key="tip" style={[styles.tip]}>{' '}Hovering!</span>
+                    <span key="tip" style={[styles.tip, this.props.tip && styles.tipBase]}>{this.props.tip}</span>
                 ) : null}
             </div>
         )
@@ -33,11 +34,14 @@ export default class Button extends React.Component {
 
 }
 var styles = {
+    tipBase: {
+        padding: '4px 6px',
+    },
     wrapper: {
         position: 'relative',
-        background: colors.purple200,
+        //background: colors.purple200,
         width: 'auto',
-        height: '30'
+        height: 'auto'
     },
     base: {
         color: colors.grey800,
@@ -45,9 +49,11 @@ var styles = {
     },
     tip: {
         position: 'absolute',
-        background: colors.green400,
-        width: 50,
-        height: 20,
+        fontSize: 12,
+        background: colors.grey600,
+        color: colors.grey50,
+        width: 'auto',
+        height: 'auto',
         top: -30,
         left: 0
     },
