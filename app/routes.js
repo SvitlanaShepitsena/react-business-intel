@@ -4,6 +4,7 @@ import { render } from 'react-dom'
 
 import App from './components/App';
 import About from './components/about/About';
+
 import ArticleForm from './components/article/ArticleForm.js';
 import Contact from './components/contact/Contact';
 import ArticleList from './components/article/ArticleList';
@@ -14,7 +15,11 @@ import Home from "./components/home/Home";
 export default (
     <Route path="/" component={App}>
         <IndexRoute component={Home}/>
-        <Route path="about" component={About}/>
+        <Route path="about" getComponent={
+
+        (location,cb)=>{require('./routes/About')(location,cb)}
+
+        }/>
         <Route path="contact" component={Contact}/>
         <Route path="post" component={ArticleForm}/>
         <Route path="design" component={DesignTemplate}/>
