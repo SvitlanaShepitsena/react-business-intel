@@ -36,8 +36,8 @@ export default class ArticleForm extends React.Component {
             <div>
                 <Toolbar title="New Article "/>
                 <form>
-                    <Button size="xl" kind="success" >Click Me!</Button>
-                    <Button size="xs" kind="danger" >Click Me!</Button>
+                    <Button size="xl" tip="Hovered" kind="success" >Click Me!</Button>
+                    <Button size="xs" tip="Button Tiny" kind="danger" >Click Me!</Button>
                     <ArticleTitle/>
                     <ArticleContent/>
                     <UploadPictures/>

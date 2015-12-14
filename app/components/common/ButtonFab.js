@@ -10,6 +10,10 @@ export default class ButtonFab extends React.Component {
         // Running constructor of Parent (React.Component) for binding this to object.
         // Dynamically assigned global property This is always a component itself.
         super(props);
+        this.state = {
+            count: 0,
+            even: true
+        }
     }
 
     /*Requiring parameters(optional.)*/
@@ -17,11 +21,26 @@ export default class ButtonFab extends React.Component {
     //    kind: React.PropTypes.oneOf(['primary', 'warning']).isRequired
     //};
 
+    increaseCount(e) {
+        /*prevents reloading app on button click*/
+        e.preventDefault();
+
+        let count = this.state.count + 1;
+        let even = !this.state.even;
+
+        this.setState({
+            count: count,
+            even: even,
+        });
+    }
+
     render() {
         return (
             <div>
+                Count:{this.state.count}
                 <button
-                    style={[styles.default, styles[this.props.size], styles[this.props.kind]]}>
+                    style={[styles.default, styles[this.props.size], styles[this.props.kind], !this.state.even && styles.clicked]}
+                    onClick={this.increaseCount.bind(this)}>
                     {this.props.children}
                 </button>
             </div>
@@ -30,12 +49,16 @@ export default class ButtonFab extends React.Component {
 
 }
 var styles = {
+    clicked: {
+        position: 'absolute',
+        bottom: -50
+    },
     default: {
         position: 'relative',
         display: 'block',
+        boxShadow: 'rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px',
         padding: 2,
         margin: 8,
-        boxShadow: 'rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px',
         borderRadius: '50% ',
         background: colors.grey100,
         color: colors.grey800,
