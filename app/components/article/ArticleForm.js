@@ -1,5 +1,4 @@
 import React from 'react';
-import Radium from 'radium';
 import connectToStores from '../../../node_modules/alt/utils/connectToStores';
 import ArticleStore from '../stores/ArticleStore.js';
 /*App Components*/
@@ -10,6 +9,7 @@ import UploadPictures from './../common/UploadPictures';
 import AddVideo from './../common/AddVideo';
 import Button from './../common/Button';
 import ButtonFab from './../common/ButtonFab';
+import Radium from 'radium';
 /*Styles*/
 import colors from '../../settings/colors.js';
 import layout from '../../settings/layout.js';
@@ -36,6 +36,8 @@ export default class ArticleForm extends React.Component {
             <div>
                 <Toolbar title="New Article "/>
                 <form>
+                    <Button size="xl" kind="success" >Click Me!</Button>
+                    <Button size="xs" kind="danger" >Click Me!</Button>
                     <ArticleTitle/>
                     <ArticleContent/>
                     <UploadPictures/>

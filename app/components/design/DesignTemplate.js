@@ -24,7 +24,7 @@ export default class DesignTemplate extends React.Component {
                 <h2>Buttons</h2>
                 <ul style={[styles.listUnstyled]}>
                     <li style={[styles.listInline]}>
-                        <Button size="xs" kind="defalut">
+                        <Button size="xs" kind="default">
                             <Code style={{marginRight:4,marginBottom:2}}/>
                             Code
                         </Button>
@@ -81,7 +81,9 @@ export default class DesignTemplate extends React.Component {
                         </ButtonFab>
                     </li>
                 </ul>
+                <br/>
                 <hr/>
+                <br/>
             </div>
         )
     }

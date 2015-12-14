@@ -88,12 +88,13 @@ app.get('/*', (req, res, next) => {
             helmet.meta,
             helmet.link,
             `<meta charset="utf-8"/>`,
+            `<meta name="viewport" content="width=device-width, initial-scale=1">`,
             `<link rel="stylesheet" href="${assetsPath}/app.css"/>`,
             `</head>`,
             `<body>`,
 
             /* server side element*/
-            `<div id="app" class="app">${markup}</div>`,
+            `<div id="app" >${markup}</div>`,
             `</body>`,
             /* client side element*/
             `<script type="text/javascript" charset="utf-8" src="${assetsPath}/app.js"></script>`,
