@@ -19,19 +19,37 @@ export default class Button extends React.Component {
 
     render() {
         return (
-            <div>
-                <button
-                    style={[styles.base, styles[this.props.size], styles[this.props.type],styles[this.props.kind]]}>
+            <div key="wrapper" style={[styles.wrapper]}>
+                <button key="base"
+                        style={[styles.base, styles[this.props.size], styles[this.props.type],styles[this.props.kind]]}>
                     {this.props.children}
                 </button>
+                {Radium.getState(this.state, 'base', ':hover') ? (
+                    <span key="tip" style={[styles.tip]}>{' '}Hovering!</span>
+                ) : null}
             </div>
         )
     }
 
 }
 var styles = {
+    wrapper: {
+        position: 'relative',
+        background: colors.purple200,
+        width: 'auto',
+        height: '30'
+    },
     base: {
         color: colors.grey800,
+        ':hover': {}
+    },
+    tip: {
+        position: 'absolute',
+        background: colors.green400,
+        width: 50,
+        height: 20,
+        top: -30,
+        left: 0
     },
     default: {
         background: colors.grey100,

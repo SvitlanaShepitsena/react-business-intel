@@ -22,7 +22,7 @@ export default class Article extends React.Component {
 
                     <div className="row">
                         <div className="twelve columns">
-                            <div style={[styles.base]}>
+                            <div>
                                 <YouTube
                                     url={this.composeYoutubeUrl(this.props.fbArticle.youtubeId)}
                                     opts={opts}
@@ -41,12 +41,3 @@ export default class Article extends React.Component {
     }
 } ;
 
-var styles = {
-    base: {
-        '@media (max-width: 992px)': {
-            height: 'auto',
-            maxWidth: '100%'
-        }
-    },
-
-};
