@@ -21,7 +21,7 @@ export default class Button extends React.Component {
         return (
             <div>
                 <button
-                    style={[styles.default, styles[this.props.size], styles[this.props.type],styles[this.props.kind]]}>
+                    style={[styles.base, styles[this.props.size], styles[this.props.type],styles[this.props.kind]]}>
                     {this.props.children}
                 </button>
             </div>
@@ -30,15 +30,27 @@ export default class Button extends React.Component {
 
 }
 var styles = {
+    base: {
+        color: colors.grey800,
+    },
     default: {
         background: colors.grey100,
         boxShadow: '0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.084)',
         fontWeight: 500,
         width: 'auto',
-        color: colors.grey800,
         '@media (max-width: 992px)': {
             minWidth: '100%'
+        },
+        ':hover': {
+            background: colors.grey300
+        },
+        ':focus': {
+            background: colors.grey300
+        },
+        ':active': {
+            background: colors.grey50
         }
+
     },
     primary: {
         border: 0,

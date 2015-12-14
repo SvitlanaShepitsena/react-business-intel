@@ -983,13 +983,15 @@ form {
     float: left;
 }
 
-.sv-iframe-responsive object,
-.sv-iframe-responsive iframe,
-.sv-iframe-responsive embed {
-    max-width: 100%;
-    height:auto;
-}
+@media only screen and (max-width: 960px) {
+    object,
+    embed,
+    iframe {
+        width: 100%;
+        height: auto;
 
+    }
+}
 
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
