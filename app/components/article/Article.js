@@ -19,10 +19,18 @@ export default class Article extends React.Component {
                 <span>{this.props.fbArticle.title}</span>
                 <div>
                     {this.props.fbArticle &&
-                    <YouTube
-                        url={this.composeYoutubeUrl(this.props.fbArticle.youtubeId)}
-                        opts={opts}
-                    />}
+
+                    <div className="row">
+                        <div className="twelve columns">
+                            <div className="sv-iframe-responsive">
+                                <YouTube
+                                    url={this.composeYoutubeUrl(this.props.fbArticle.youtubeId)}
+                                    opts={opts}
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    }
                 </div>
             </div>
         )

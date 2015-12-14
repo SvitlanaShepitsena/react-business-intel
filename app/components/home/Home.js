@@ -4,7 +4,6 @@ import Toolbar from '../common/Toolbar';
 import ArticleList from '../article/ArticleList';
 
 
-
 export default class Home extends React.Component {
     constructor(props) {
         super(props);
