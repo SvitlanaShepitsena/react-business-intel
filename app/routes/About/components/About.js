@@ -14,6 +14,10 @@ export default class About extends React.Component {
             <div>
                 <Helmet title="About Our App"/>
                 <Toolbar title="About Component"/>
+                <div>
+                </div>
+                <div>
+                </div>
                 <ArticleForm/>
             </div>
         )

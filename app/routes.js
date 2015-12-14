@@ -15,7 +15,11 @@ import Home from "./components/home/Home";
 export default (
     <Route path="/" component={App}>
         <IndexRoute component={Home}/>
-        <Route path="about" getComponent={(location,cb)=>{require('./routes/About')(location,cb)}}/>
+        <Route path="about" getComponent={
+
+        (location,cb)=>{require('./routes/About')(location,cb)}
+
+        }/>
         <Route path="contact" component={Contact}/>
         <Route path="post" component={ArticleForm}/>
         <Route path="design" component={DesignTemplate}/>
