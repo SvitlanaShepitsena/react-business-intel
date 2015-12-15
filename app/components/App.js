@@ -3,15 +3,29 @@ import {Link} from 'react-router';
 import Helmet from "react-helmet";
 import Aside from "./common/Aside";
 import Toolbar from "./common/Toolbar";
-import Radium, { Style } from 'radium'
+import Radium from 'radium'
 import typography from '../settings/typography.js';
-
 
 @Radium
 export default class App extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {location: this.props.location};
+        this.state = {
+            location: this.props.location,
+            windowWidth: 0,
+            mediaBreakPoint: 762
+        }
+    }
+
+    resize = ()=>this.setState({windowWidth: window.innerWidth});
+
+    componentDidMount() {
+        this.setState({windowWidth: window.innerWidth});
+        window.addEventListener('resize', this.resize.bind(this));
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.resize.bind(this));
     }
 
     render() {
@@ -19,7 +33,12 @@ export default class App extends React.Component {
         let youTubeId = 'xjX_-VjsUfU';
         return (
             <div className="container">
-                <Style rules={{ textarea: { fontFamily: typography.fontFamilySegoe } }}/>
+                <Radium.Style rules={
+               {iframe:this.state.windowWidth<this.state.mediaBreakPoint &&{width:'100%',height:'auto'},
+                textarea:{font:typography.fontFamilySegoe}
+                }
+                }/>
+
                 <Helmet
                     title="Web Application Startup Template with ReactJs"
                     meta={[

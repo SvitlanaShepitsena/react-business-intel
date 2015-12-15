@@ -983,16 +983,6 @@ form {
     float: left;
 }
 
-@media only screen and (max-width: 960px) {
-    object,
-    embed,
-    iframe {
-        width: 100%;
-        height: auto;
-
-    }
-}
-
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {

@@ -1,9 +1,7 @@
 import React from 'react';
 import {Redirect,Route,IndexRoute} from 'react-router'
 import { render } from 'react-dom'
-
 import App from './components/App';
-import About from './components/about/About';
 
 import ArticleForm from './components/article/ArticleForm.js';
 import Contact from './components/contact/Contact';
@@ -17,7 +15,7 @@ export default (
         <IndexRoute component={Home}/>
         <Route path="about" getComponent={
 
-        (location,cb)=>{require('./routes/About')(location,cb)}
+        (location,cb)=>require('./routes/About')(location,cb)
 
         }/>
         <Route path="contact" component={Contact}/>
