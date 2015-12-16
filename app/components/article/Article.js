@@ -1,6 +1,8 @@
 import React from 'react';
 import YouTube from 'react-youtube';
+import Radium from 'radium';
 
+@Radium
 export default class Article extends React.Component {
     constructor(props) {
         super(props);
@@ -8,31 +10,21 @@ export default class Article extends React.Component {
 
     render() {
         const opts = {
-            height: '490',
-            width: '740',
+            height: '200',
+            width: '300',
             playerVars: {
                 autoplay: 0
             }
         };
         return (
-            <div>
-                <span>{this.props.fbArticle.title}</span>
-                <div>
-                    {this.props.fbArticle &&
-
-                    <div className="row">
-                        <div className="twelve columns">
-                            <div>
-                                <YouTube
-                                    url={this.composeYoutubeUrl(this.props.fbArticle.youtubeId)}
-                                    opts={opts}
-                                />
-                            </div>
-                        </div>
-                    </div>
-                    }
-                </div>
-            </div>
+            <li style={[styles.thumb]}>
+                {this.props.fbArticle &&
+                <YouTube
+                    url={this.composeYoutubeUrl(this.props.fbArticle.youtubeId)}
+                    opts={opts}
+                />
+                }
+            </li>
         )
     }
 
@@ -40,4 +32,8 @@ export default class Article extends React.Component {
         return `http://youtu.be/${key}`;
     }
 } ;
-
+var styles = {
+    thumb: {
+        margin: 5
+    }
+};

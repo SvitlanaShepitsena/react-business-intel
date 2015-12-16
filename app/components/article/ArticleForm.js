@@ -42,8 +42,7 @@ export default class ArticleForm extends React.Component {
                 }}/>
                 <Toolbar title="New Article "/>
                 <form className="ArticleFormClass">
-                    <Button size="xl" tip="Hovered" kind="success">Click Me!</Button>
-                    <Button size="xs" tip="Button Tiny" kind="danger">Click Me!</Button>
+                    <Button size="m" tip="Save Article" kind="primary">Submit</Button>
                     <ArticleTitle/>
                     <ArticleContent/>
                     <UploadPictures/>

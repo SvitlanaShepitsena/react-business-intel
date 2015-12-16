@@ -1,18 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
 
-//import ReactRouter from 'react-router';
-//let Link = ReactRouter.Link;
-
-var Person = {
-    name: 'John',
-    age: 20
-};
-var name = Person.name;
-var age = Person.age;
-
-var {name,age}=Person;
-
 import Radium from 'radium';
 
 @Radium

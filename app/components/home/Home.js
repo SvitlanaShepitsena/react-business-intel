@@ -17,9 +17,9 @@ export default class Home extends React.Component {
                 <div >
                     <br/>
                     <div >
+                        <h4 style={styles.pageHeaderStyles}>
+                            ReactJs. Best Practices for Personal Webapps</h4>
                         <span style={styles.colorPlaylist}>Youtube Playlist</span>
-                        <h2 style={styles.pageHeaderStyles}>
-                            ReactJs. Best Practices for Personal Webapps!</h2>
                         <hr/>
                         <ArticleList/>
                     </div>
