@@ -13,6 +13,7 @@ import Radium from 'radium';
 /*Styles*/
 import colors from '../../settings/colors.js';
 import layout from '../../settings/layout.js';
+import typography from '../../settings/typography.js';
 import IconBase from '../common/IconBase.js';
 import Code from '../icons/code';
 
@@ -33,11 +34,16 @@ export default class ArticleForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div id="ArticleForm">
+                <Radium.Style
+                    scopeSelector="#ArticleForm"
+                    rules={{
+                textarea:{fontFamily:typography.fontFamilyComic},
+                }}/>
                 <Toolbar title="New Article "/>
-                <form>
-                    <Button size="xl" tip="Hovered" kind="success" >Click Me!</Button>
-                    <Button size="xs" tip="Button Tiny" kind="danger" >Click Me!</Button>
+                <form className="ArticleFormClass">
+                    <Button size="xl" tip="Hovered" kind="success">Click Me!</Button>
+                    <Button size="xs" tip="Button Tiny" kind="danger">Click Me!</Button>
                     <ArticleTitle/>
                     <ArticleContent/>
                     <UploadPictures/>

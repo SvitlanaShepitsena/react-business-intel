@@ -33,11 +33,17 @@ export default class App extends React.Component {
         let youTubeId = 'xjX_-VjsUfU';
         return (
             <div className="container">
-                <Radium.Style rules={
-               {iframe:this.state.windowWidth<this.state.mediaBreakPoint &&{width:'100%',height:'auto'},
-                textarea:{font:typography.fontFamilySegoe}
-                }
-                }/>
+                <Radium.Style rules={{
+                textarea:{color:typography.fontFamilySegoe},
+                mediaQueries: {
+                    '(max-width: 762px)': {
+                      'iframe,object,embed':  {
+                        width: '100%',
+                        height: 'auto'
+                      }
+                    }
+                  }
+                }}/>
 
                 <Helmet
                     title="Web Application Startup Template with ReactJs"

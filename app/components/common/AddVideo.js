@@ -4,6 +4,7 @@ import Actions from '../actions/actions';
 /*Styles*/
 import colors from '../../settings/colors.js';
 import layout from '../../settings/layout.js';
+import typography from '../../settings/typography.js';
 
 @Radium
 export default class AddVideo extends React.Component {

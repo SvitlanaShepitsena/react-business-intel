@@ -17,9 +17,9 @@ export default class ArticleContet extends React.Component {
 
     render() {
         return (
-            <div>
+            <div >
                     <textarea
-                        className="u-full-width"
+                        className="u-full-width "
                         type="text"
                         style={styles.contentStyles}
                         placeholder="Article Content"
