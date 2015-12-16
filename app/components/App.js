@@ -1,9 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router';
 import Helmet from "react-helmet";
+import Radium from 'radium'
+/*Components*/
 import Aside from "./common/Aside";
 import Toolbar from "./common/Toolbar";
-import Radium from 'radium'
+/*Styles*/
 import typography from '../settings/typography.js';
 
 @Radium
@@ -15,17 +17,6 @@ export default class App extends React.Component {
             windowWidth: 0,
             mediaBreakPoint: 762
         }
-    }
-
-    resize = ()=>this.setState({windowWidth: window.innerWidth});
-
-    componentDidMount() {
-        this.setState({windowWidth: window.innerWidth});
-        window.addEventListener('resize', this.resize.bind(this));
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.resize.bind(this));
     }
 
     render() {
