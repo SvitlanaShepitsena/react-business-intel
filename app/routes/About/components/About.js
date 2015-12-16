@@ -15,17 +15,54 @@ export default class About extends React.Component {
     render() {
         return (
             <div>
-                <Helmet title="About Our App"/>
-                <Toolbar title="About Us "/>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-                    deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
-                    provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
-                    fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis
-                    est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis
-                    voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis
-                    aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non
-                    recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus
-                    maiores alias consequatur aut perferendis doloribus asperiores repellat</p>
+                <Helmet title="About Our Project"/>
+                <Toolbar title="About Our Project"/>
+                <article>
+
+                    <p>
+                        This project is an implementation of react isomorphic (universal) webapp. It allows to create
+                        your
+                        react app ones and
+                        render it on server and client by using flux store (alt implementation of flux). The project
+                        also
+                        implements 'lazy' (async)
+                        loading of react components via require.ensure and Webpack. It really works with ES6 modules.
+                    </p>
+
+                    <p>
+                        For layout we used just skeleton and manage inline styles with Radium. Imho, it is a good
+                        starter
+                        point for a small personal
+                        website. Hope our tutorials and project was useful for learning react workflow.
+                    </p>
+                    <ol>
+                        <li>
+                            <code>
+                                git clone https://github.com/SvitlanaShepitsena/react-business-intel.git
+                            </code>
+
+                        </li>
+                        <li>
+                            <code>
+                                npm install
+                            </code>
+
+                        </li>
+                        <li>
+                            <code>
+                                npm run app:server:start:dev
+                            </code>
+                        </li>
+                        <li>
+                            <code>
+                                npm run app:webpack:start
+                            </code>
+
+                        </li>
+                    </ol>
+
+                </article>
+
             </div>
         )
     }
