@@ -15,7 +15,7 @@ export default class Nav extends React.Component {
                 {this.props.links.map((link, i)=> {
                     return (
                         <li style={styles.liStyles} key={i}>
-                            <Link to={`/${link}`} style={styles.linkStyles}>{link}</Link>
+                            <Link to={`/${link.replace(/\s+/g,'-')}`} style={styles.linkStyles}>{link}</Link>
                         </li>
                     )
                 })

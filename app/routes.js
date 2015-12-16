@@ -14,15 +14,15 @@ import Home from "./components/home/Home";
 export default (
     <Route path="/" component={App}>
         <IndexRoute component={Home}/>
-        <Route path="about" getComponent={
+        <Route path="about-our-project" getComponent={
         (location,cb)=>require('./routes/About')(location,cb)
         }/>
-        <Route path="contact" component={Contact}/>
-        <Route path="post" component={ArticleForm}/>
-        <Route path="design" component={DesignTemplate}/>
         <Route path="articles" component={Articles}>
             <Route path="/articles/:id" component={Article}/>
         </Route>
+        <Route path="add-an-article" component={ArticleForm}/>
+        <Route path="design-components" component={DesignTemplate}/>
+        <Route path="radium-keyframes" component={Contact}/>
         <Redirect from='/*' to="/"/>
     </Route>
 );
