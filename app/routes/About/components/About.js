@@ -1,5 +1,6 @@
 import React from 'react';
 import Helmet from "react-helmet";
+/*Components*/
 import Toolbar from '../../../components/common/Toolbar';
 import ArticleForm from '../../../components/article/ArticleForm.js';
 

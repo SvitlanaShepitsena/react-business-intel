@@ -5,21 +5,13 @@ import colors from '../../settings/colors.js';
 
 @Radium
 export default class ButtonFab extends React.Component {
-    // Constructor
     constructor(props) {
-        // Running constructor of Parent (React.Component) for binding this to object.
-        // Dynamically assigned global property This is always a component itself.
         super(props);
         this.state = {
             count: 0,
             even: true
         }
     }
-
-    /*Requiring parameters(optional.)*/
-    //static propTypes = {
-    //    kind: React.PropTypes.oneOf(['primary', 'warning']).isRequired
-    //};
 
     increaseCount(e) {
         /*prevents reloading app on button click*/

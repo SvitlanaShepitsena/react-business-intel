@@ -1,14 +1,16 @@
 import path from 'path';
 import express from 'express';
 import React from 'react';
-import createLocation from 'history/lib/createLocation';
 import Helmet from 'react-helmet';
-import {RoutingContext, match} from 'react-router';
 import {renderToString} from 'react-dom/server';
-import routes from './routes';
 
 import Iso from 'iso';
 import altInstance from './components/alt';
+/*Routes*/
+import createLocation from 'history/lib/createLocation';
+import {RoutingContext, match} from 'react-router';
+import routes from './routes';
+/*Database*/
 import Firebase from 'firebase';
 
 // Getting
@@ -54,16 +56,12 @@ app.use((req, res, next)=> {
             store.ArticleStore.articlesLoading = false;
             res.locals.data = JSON.stringify(store);
             next()
-
         });
-
     } else {
 
         res.locals.data = JSON.stringify(store);
         next();
     }
-
-
 });
 
 

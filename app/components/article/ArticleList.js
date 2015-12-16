@@ -1,14 +1,13 @@
 import React from 'react';
 import Radium from 'radium';
-
 import Helmet from "react-helmet";
-import Toolbar from '../common/Toolbar';
-
 import YouTube from 'react-youtube';
-import Article from './Article';
-
+/*Stores*/
 import connectToStores from 'alt/utils/connectToStores';
 import ArticleStore from '../stores/ArticleStore';
+/*Sections*/
+import Toolbar from '../common/Toolbar';
+import Article from './Article';
 
 @connectToStores
 @Radium
@@ -28,7 +27,6 @@ export default class ArticleList extends React.Component {
     componentDidMount() {
         ArticleStore.getArticles();
     }
-
 
     render() {
         return (

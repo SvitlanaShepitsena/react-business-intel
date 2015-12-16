@@ -2,11 +2,7 @@ import alt from '../alt';
 import Actions from '../actions/actions';
 import ArticleSource from '../sources/ArticleSource'
 
-
-
-
 import {decorate, bind, datasource} from 'alt/utils/decorators';
-
 
 @datasource(ArticleSource)
 @decorate(alt)
@@ -16,7 +12,6 @@ class ArticleStore {
             articles: [],
             articlesLoading: true
         };
-
         this.on('init', this.bootstrap);
         this.on('bootstrap', this.bootstrap);
     }
@@ -46,13 +41,11 @@ class ArticleStore {
 
     @bind(Actions.articleReceived)
     articleReceived(article) {
-        this.state.articles[article.key]=article;
+        this.state.articles[article.key] = article;
         this.setState({
-            articles:this.state.articles
+            articles: this.state.articles
         });
     }
-
-
 }
 
 export default alt.createStore(ArticleStore);

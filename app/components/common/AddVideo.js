@@ -10,7 +10,6 @@ import typography from '../../settings/typography.js';
 export default class AddVideo extends React.Component {
     constructor(props) {
         super(props);
-
     }
 
     updateLocal(event) {

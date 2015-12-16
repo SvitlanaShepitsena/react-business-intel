@@ -3,9 +3,10 @@ import Radium from 'radium';
 import color from 'tinycolor2';
 import {Link} from 'react-router';
 
+/*Components*/
 import Nav from './Nav';
 import Logo from './Logo';
-
+/*Stores*/
 import connectToStores from 'alt/utils/connectToStores';
 import ArticleStore from '../stores/ArticleStore';
 

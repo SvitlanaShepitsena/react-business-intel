@@ -11,11 +11,7 @@ import Button from './../common/Button';
 import ButtonFab from './../common/ButtonFab';
 import Radium from 'radium';
 /*Styles*/
-import colors from '../../settings/colors.js';
-import layout from '../../settings/layout.js';
 import typography from '../../settings/typography.js';
-import IconBase from '../common/IconBase.js';
-import Code from '../icons/code';
 
 @connectToStores
 @Radium

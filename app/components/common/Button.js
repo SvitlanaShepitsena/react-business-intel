@@ -2,13 +2,11 @@ import React from 'react';
 import Radium from 'radium';
 /*Styles*/
 import colors from '../../settings/colors.js';
+import elements from '../../settings/elements.js';
 
 @Radium
 export default class Button extends React.Component {
-    // Constructor
     constructor(props) {
-        // Running constructor of Parent (React.Component) for binding this to object.
-        // Dynamically assigned global property This is always a component itself.
         super(props);
     }
 
@@ -53,19 +51,21 @@ var styles = {
         left: 0
     },
     base: {
-        ':hover': {}
+        ':hover': {
+            boxShadow: elements.shadowBtnHover,
+        }
     },
     default: {
         background: colors.grey500,
         color: colors.grey50,
-        boxShadow: '0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.084)',
+        boxShadow: elements.shadowBtn,
         fontWeight: 500,
         width: 'auto',
         '@media (max-width: 992px)': {
             minWidth: '100%'
         },
         ':hover': {
-            background: colors.grey600
+            background: colors.grey600,
         },
         ':focus': {
             background: colors.grey600

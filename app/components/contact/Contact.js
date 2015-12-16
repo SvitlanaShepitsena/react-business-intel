@@ -1,5 +1,6 @@
 import React from 'react';
 import Helmet from "react-helmet";
+/*Components*/
 import Toolbar from '../common/Toolbar';
 import Spinner from '../common/Spinner';
 

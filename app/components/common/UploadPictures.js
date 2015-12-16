@@ -7,7 +7,6 @@ import Actions from '../actions/actions';
 export default class UploadPictures extends React.Component {
     constructor(props) {
         super(props);
-
     }
 
     updateLocal(event) {

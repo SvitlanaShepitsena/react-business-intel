@@ -9,7 +9,6 @@ import layout from '../../settings/layout.js';
 export default class ArticleTitle extends React.Component {
     constructor(props) {
         super(props);
-
     }
 
     updateLocal(event) {
