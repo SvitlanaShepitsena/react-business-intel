@@ -1,13 +1,18 @@
 import React from 'react';
+import Radium from 'radium';
 import Helmet from "react-helmet";
 /*Components*/
 import Toolbar from '../../../components/common/Toolbar';
 import ArticleForm from '../../../components/article/ArticleForm.js';
 /*Styles*/
 import layout from '../../../settings/layout.js';
+import colors from '../../../settings/colors.js';
+/*Icons*/
+import Github from '../../../components/icons/github.js';
 
 import Guid from 'guid'
 
+@Radium
 export default class About extends React.Component {
     /* Run extended class constructor. Required in ES6*/
     constructor(props) {
@@ -25,7 +30,7 @@ export default class About extends React.Component {
         return (
             <div>
                 <Helmet
-                    title="About Our Project"
+                    title=" React Components design with Radium"
                     meta={[
                     {"property": "og:title", "content": title},
                     {"property": "og:url", "content": url },
@@ -35,7 +40,11 @@ export default class About extends React.Component {
                 />
                 <Toolbar title="About Our Project"/>
                 <article>
-
+                    <div >
+                        <a href="https://github.com/SvitlanaShepitsena/react-business-intel" style={[styles.base]}>
+                            <Github />
+                        </a>
+                    </div>
                     <p>
                         This project is an implementation of react isomorphic (universal) webapp. It allows to create
                         your
@@ -84,3 +93,42 @@ export default class About extends React.Component {
         )
     }
 };
+var styles = {
+    base: {
+        marginRight: 4,
+        color: '#244762',
+        marginBottom: 2,
+        fontSize: 28
+    },
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

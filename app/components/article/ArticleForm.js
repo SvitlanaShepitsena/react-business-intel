@@ -37,8 +37,8 @@ export default class ArticleForm extends React.Component {
                 textarea:{fontFamily:typography.fontFamilyComic},
                 }}/>
                 <Toolbar title="New Article "/>
-                <form className="ArticleFormClass">
-                    <Button size="m"  kind="primary">Submit</Button>
+                <form >
+                    <Button size="m" kind="primary">Submit</Button>
                     <ArticleTitle/>
                     <ArticleContent/>
                     <UploadPictures/>
