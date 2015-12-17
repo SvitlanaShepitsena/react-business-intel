@@ -26,7 +26,6 @@ export default class Aside extends React.Component {
     }
 
     render() {
-
         var links = ['about our project', 'articles', 'add an article', 'buttons design', 'radium keyframes'];
         return (
             <div style={[styles.base]}>

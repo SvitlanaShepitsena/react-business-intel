@@ -32,11 +32,9 @@ export default class Contact extends React.Component {
 
     render() {
         let title = "ReactJs. Best Practices for Personal Webapps";
-        let description = "This project is an implementation of react isomorphic (universal) webapp. It allows to create your react app ones and render it on server and client by using flux store (alt implementation of flux). The project also implements 'lazy' (async) loading of react components via require.ensure and Webpack. It really works with ES6 modules. For layout we used just skeleton and manage inline styles with Radium. Imho, it is a good starter point for a small personal website. Hope our tutorials and project was useful for learning react workflow";
-        let youTubeId = 'xjX_-VjsUfU';
+        let description = "Radium Keyframes Functionality Example";
         let url = `http://www.chicagowebapp.com${this.state.location.pathname}`;
-        let video = `http://youtu.be/${youTubeId}`;
-        let image = `http://img.youtube.com/vi/${youTubeId}/hqdefault.jpg`;
+        let image = `http://res.cloudinary.com/svitlana/image/upload/v1450385637/chicagoweb/contact.jpg`;
         return (
             <div id="contactUs">
                 <Radium.Style
@@ -50,7 +48,6 @@ export default class Contact extends React.Component {
                     meta={[
                     {"property": "og:title", "content": title},
                     {"property": "og:url", "content": url},
-                    {"property": "og:video", "content": video},
                     {"property": "og:description", "content": description},
                     {"property": "og:image", "content": image},
                 ]}
@@ -61,7 +58,7 @@ export default class Contact extends React.Component {
                 <ul>
                     <li>
                         <div style={[styles.btnContainer]}>
-                            <button onClick={this.sendMessage}>Send</button>
+                            <button className="button-primary" onClick={this.sendMessage}>Send</button>
                         </div>
                     </li>
                     <li>

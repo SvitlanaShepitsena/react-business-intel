@@ -8,7 +8,7 @@ export default class Spinner extends React.Component {
     render() {
         return (
             <div style={[styles.base]}>
-                <div style={[this.props.sent && styles.animation]}>{!this.props.sent && 'Not send yet'}</div>
+                <div style={[this.props.sent && styles.animation]}>{!this.props.sent && 'Not sent yet'}</div>
             </div>
         );
     }

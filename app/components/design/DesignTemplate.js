@@ -22,9 +22,9 @@ export default class DesignTemplate extends React.Component {
     }
 
     render() {
-        let title = "Buttons design example with a React component styling library Radium";
+        let title = "ReactJs. Best Practices for Personal Webapps";
+        let description = "Buttons design example with a React component styling library Radium";
         var image = "http://res.cloudinary.com/svitlana/image/upload/v1450374277/chicagoweb/Buttons-Design-with-Inline-styles-in-React.jpg";
-        let description = "This project is an implementation of react isomorphic (universal) webapp. It allows to create your react app ones and render it on server and client by using flux store (alt implementation of flux). The project also implements 'lazy' (async) loading of react components via require.ensure and Webpack. It really works with ES6 modules. For layout we used just skeleton and manage inline styles with Radium. Imho, it is a good starter point for a small personal website. Hope our tutorials and project was useful for learning react workflow";
         let url = `http://www.chicagowebapp.com${this.state.location.pathname}`
         return (
             <div>
