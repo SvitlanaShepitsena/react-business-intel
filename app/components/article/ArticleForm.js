@@ -38,7 +38,7 @@ export default class ArticleForm extends React.Component {
                 }}/>
                 <Toolbar title="New Article "/>
                 <form className="ArticleFormClass">
-                    <Button size="m" tip="Save Article" kind="primary">Submit</Button>
+                    <Button size="m"  kind="primary">Submit</Button>
                     <ArticleTitle/>
                     <ArticleContent/>
                     <UploadPictures/>

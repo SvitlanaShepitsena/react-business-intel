@@ -14,12 +14,8 @@ export default class ButtonFab extends React.Component {
     }
 
     increaseCount(e) {
-        /*prevents reloading app on button click*/
-        e.preventDefault();
-
         let count = this.state.count + 1;
         let even = !this.state.even;
-
         this.setState({
             count: count,
             even: even,
@@ -29,9 +25,12 @@ export default class ButtonFab extends React.Component {
     render() {
         return (
             <div>
-                Count:{this.state.count}
+                <div>
+                    Count:{this.state.count}
+                </div>
                 <button
-                    style={[styles.default, styles[this.props.size], styles[this.props.kind], !this.state.even && styles.clicked]}
+                    style={[styles.default, styles[this.props.size], styles[this.props.kind],
+                    !this.state.even && styles.moved]}
                     onClick={this.increaseCount.bind(this)}>
                     {this.props.children}
                 </button>
@@ -41,12 +40,12 @@ export default class ButtonFab extends React.Component {
 
 }
 var styles = {
-    clicked: {
-        position: 'absolute',
-        bottom: -50
+    moved: {
+        top: 110
     },
     default: {
-        position: 'relative',
+        position: 'absolute',
+        top: 150,
         display: 'block',
         boxShadow: 'rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px',
         padding: 2,

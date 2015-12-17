@@ -13,11 +13,7 @@ import elements from '../../settings/elements.js';
 
 @Radium
 export default class DesignTemplate extends React.Component {
-    // Constructor
-
     constructor(props) {
-        // Running constructor of Parent (React.Component) for binding this to object.
-        // Dynamically assigned global property This is always a component itself.
         super(props);
     }
 
@@ -62,7 +58,7 @@ export default class DesignTemplate extends React.Component {
                     </ul>
                 </div>
                 <br/>
-                <div style={[styles.whiteframe]}>
+                <div style={[styles.whiteframe, styles.heightFixed]}>
                     <h2>Button-Fab</h2>
                     <ul style={[styles.listUnstyled]}>
                         <li style={[styles.listInline]}>
@@ -103,6 +99,11 @@ var styles = {
         backgroundColor: colors.grey100,
         //boxShadow: elements.card24
         boxShadow: elements.card8
+    },
+    heightFixed: {
+        position: 'relative',
+        height: '100%',
+        minHeight: 220
     },
     listUnstyled: {
         decoration: 'none',

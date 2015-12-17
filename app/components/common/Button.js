@@ -10,20 +10,20 @@ export default class Button extends React.Component {
         super(props);
     }
 
-    /*Requiring parameters(optional.)*/
-    //static propTypes = {
-    //    kind: React.PropTypes.oneOf(['primary', 'warning']).isRequired
-    //};
-
     render() {
         return (
-            <div key="wrapper" style={[styles.wrapper]}>
-                <button key="base"
-                        style={[styles.base, styles[this.props.size], styles[this.props.type],styles[this.props.kind] ]}>
+            <div style={[styles.wrapper]}>
+                <button key="articleBtn"
+                        style={[styles.base,
+                        styles[this.props.type],
+                        styles[this.props.size],
+                        styles[this.props.kind] ]}>
                     {this.props.children}
                 </button>
-                {Radium.getState(this.state, 'base', ':hover') ? (
-                    <span key="tip" style={[styles.tip, this.props.tip && styles.tipBase]}>{this.props.tip}</span>
+                {Radium.getState(this.state, 'articleBtn', ':hover') ? (
+                    <span style={[styles.tip, this.props.tip && styles.tipBase]}>
+                        {this.props.tip || "Give me some tip!"}
+                </span>
                 ) : null}
             </div>
         )
@@ -38,9 +38,10 @@ var styles = {
         height: 'auto'
     },
     tipBase: {
-        padding: '4px 6px',
+        //padding: '4px 6px',
     },
     tip: {
+        padding: '4px 6px',
         position: 'absolute',
         fontSize: 12,
         background: colors.grey700,
