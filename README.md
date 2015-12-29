@@ -9,3 +9,5 @@ Code example for a [video tutorials](https://www.youtube.com/playlist?list=PLPgD
 1. Start application HTTP server: `npm run app:server:start:dev`.
 2. Start application Webpack server: `npm run app:webpack:start`.
 3. Navigate to `http://localhost:4444`.
+
+<sub>P.S. Project was updated to fix alt updates breaking changes. Special thanks to Steven Bennett </sub>
