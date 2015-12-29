@@ -10,4 +10,4 @@ Code example for a [video tutorials](https://www.youtube.com/playlist?list=PLPgD
 2. Start application Webpack server: `npm run app:webpack:start`.
 3. Navigate to `http://localhost:4444`.
 
-<sub>P.S. Project was updated to fix alt updates breaking changes. Special thanks to Steven Bennett </sub>
+<sub>P.S. Project was updated to fix alt updates with breaking changes. In addition, all ambiguos repositories were removed. Special thanks to Steven Bennett </sub>
