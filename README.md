@@ -2,7 +2,7 @@
 ##Boilerplate for Isomorphic Relay React App (with Hot Module Replacement)
 
 Code example for a [video tutorials](https://www.youtube.com/playlist?list=PLPgDBCA1Cb3Ngjpo21aFkdqVT2H0fZu3W) 
-
+Initial Boilerplate: https://github.com/WebbyLab/itsquiz-wall
 
 # Start
 0. `npm install`
